@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg height="800px" width="800px" version="1.1" id="Capa_1" viewBox="0 0 279.121 279.121" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <rect style="stroke-linejoin: round; paint-order: stroke markers; fill: rgb(67, 134, 245); stroke: rgb(0, 0, 0); stroke-width: 11px;" width="266.561" height="266.561" rx="34.89" ry="34.89" y="6.28" x="6.28"/>
+  <rect x="74.275" y="58.328" width="172.112" height="162.465" style="stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-miterlimit: 7.85; paint-order: stroke; fill: rgb(255, 255, 255); stroke-width: 14px; stroke-linejoin: round;"/>
+  <rect x="32.734" y="58.328" width="41.541" height="162.465" style="stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-miterlimit: 7.85; paint-order: stroke; stroke-width: 14px; fill: rgb(194, 194, 194); stroke-linejoin: round;"/>
+  <rect x="81.182" y="58.328" width="165.205" height="26.348" style="stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-miterlimit: 7.85; paint-order: stroke; stroke-width: 14px; fill: rgb(195, 195, 195); stroke-linejoin: round;"/>
+  <rect x="110.54" y="108.652" width="91.383" height="95.858" style="stroke-linecap: round; stroke-miterlimit: 7.85; paint-order: stroke; fill: rgb(255, 255, 255); stroke-width: 10px; stroke: rgb(255, 255, 255); stroke-linejoin: round;"/>
+  <path d="M 245.325 56.507 Q 249.777 53.08 249.777 56.507 L 249.777 220.997 Q 249.777 224.424 245.325 224.424 L 31.635 224.424 Q 27.183 224.424 31.635 220.997 Z" style="fill: rgb(255, 255, 255); fill-opacity: 0.75; stroke-linecap: round; stroke-width: 7px; paint-order: fill; stroke: rgb(0, 0, 0);" bx:shape="triangle 27.183 53.08 222.594 171.344 1 0.02 1@3b271d98"/>
+</svg>
