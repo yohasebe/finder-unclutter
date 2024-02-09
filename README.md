@@ -1,6 +1,6 @@
 # Finder Unclutter
 
-🎩 An Alfred workflow that removes duplicate Finder tabs and windows and arranges them into a single or dual-pane layout for a cleaner desktop experience 🖥️ 🧹
+An Alfred 🎩 workflow that removes duplicate Finder tabs and windows and arranges them into a single or dual-pane 👓 layout for a cleaner desktop experience 🖥️ 🧹
 
 <img src="./icons/finder-unclutter@2x.png" width=150>
 
@@ -121,7 +121,7 @@ Reverse the contents of the primary (left) and secondary (right) panes in the du
 
 ## Author
 
-Yoichiro Hasebe (yohasebe@gmail.com)
+Yoichiro Hasebe yohasebe@gmail.com
 
 ## License
 
