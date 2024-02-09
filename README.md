@@ -121,7 +121,7 @@ Reverse the contents of the primary (left) and secondary (right) panes in the du
 
 ## Author
 
-Yoichiro Hasebe [yohasebe@gmail.com]
+Yoichiro Hasebe (yohasebe@gmail.com)
 
 ## License
 
