@@ -20,7 +20,8 @@ An Alfred 🎩 workflow that removes duplicate Finder tabs and windows and arran
 ## Requirements
 
 - [Alfred 5](https://www.alfredapp.com/) with Powerpack
-- Finder.app with `language` set to `English`
+- Set `language` to `English` in the Finder setting
+- Hide `Status Bar` in the Finder menu (for proper vertical placement)
 
 > **IMPORTANT**: This Workflow only functions properly if the language setting of **Finder.app** is set to **English** due to the way it interacts with Finder's interface. You must either select English in `Language & Region / Preferred Languages`, or set the language setting of Finder.app to English in `Language & Region / Applications`. A system restart may be required after changing these settings.
 
@@ -28,7 +29,7 @@ This workflow has been developed and tested on macOS Sonoma 14.3.
 
 ## Installation
 
-To install, download [Finder Unclutter Alfred Workflow](https://github.com/yohasebe/finder-unclutter.alfredworkflow) (version 0.1.0)
+To install, download [Finder Unclutter Alfred Workflow](https://github.com/yohasebe/finder-unclutter/raw/main/finder-unclutter.alfredworkflow) (version 0.1.1)
 
 ## Features
 
@@ -40,7 +41,7 @@ Organizes Finder tabs/windows into a double-pane Finder window. All existing tab
 
 The secondary pane will contain only one tab that displays the user-specified contents (`same as primary`, `parent`, `desktop`, or `home`).
 
-The dual Finder pane can be placed in either `center`, `top`, `bottom`, or `fill`. You can either specify the area by either setting the config, using hotkeys, or selecting one on running the workflow.
+The dual Finder pane can be placed in either `center (horizontal)`, `center (vertical)`, `fill (horizontal)`, `fill (vertical)`, `left`, `right`, `top`, or `bottom`. You can either specify the area either by using hotkeys, or by selecting one on running the workflow.
 
 <img src="./images/dual-pane-position.png" width=400>
 
@@ -48,7 +49,7 @@ The dual Finder pane can be placed in either `center`, `top`, `bottom`, or `fill
 
 Finder tabs/windows will be organized into a single Finder window. All existing tabs will be collected in this Finder window.
 
-The dual Finder pane can be placed in either `center`, `top`, `left`, `right`, `bottom`, or `fill`. You can either specify the area by either setting the config, using hotkeys, or selecting one on running the workflow.
+The dual Finder pane can be placed in either `center`, `fill`, `left`, `right`, `top`, or `bottom`. You can either specify the area either by using hotkeys, or by selecting one on running the workflow.
 
 <img src="./images/single-pane-position.png" width=400>
 
@@ -78,17 +79,9 @@ For details on each of the configurable parameters, see [below](#configuration).
 
 Setting the Sidebar Width to 0 will hide the sidebar. Otherwise, this value is set as the width of the sidebar (`0-500`, default = `200`).
 
-#### Sidebars in dual pane mode
+#### Sidebars in horizontal dual pane mode
 
-If set to `single`, the sidebar is shown only in the left-hand side Finder window (default = single). If set to `double`, the dual pane window will look like this
-
-#### Single pane window position
-
-Area of the desktop in which Finder window in single pane mode from `selectable`, `center`, `top`, `bottom`, `left`, `right` or `fill` (default = `selectable`).
-
-#### Dual pane window position
-
-Area of the desktop in which Finder window in dual pane mode from `selectable`, `center`, `top`, `bottom`, or `fill` (default = `center`).
+If set to `single`, the sidebar is shown only in the left-hand side Finder window (default = single).
 
 #### Home folder path
 
@@ -99,13 +92,13 @@ Specifies the UNIX path of a new folder to open when no Finder window is present
 The finder view type used on the primary pane (`list`, `icon`, `column`, or `gallery`, default = `list`).
 
 
-#### View type in secondary pane
+#### View type of secondary pane
 
 The finder view type used on the secondary pane (`list`, `icon`, `column`, or `gallery`, default = `list`).
 
-#### Folder on the right side in dual pane mode
+#### Contents on secondary pane 
 
-The contents presented on the right-hand side of the dual pane (`same as left`, `home`, `parent`,  `desktop`, default = `parent`)
+The contents presented on the secondary pane (`same as primary`, `home`, `parent`,  `desktop`, default = `parent`)
 
 #### Wait message
 
@@ -117,7 +110,7 @@ If checked, other apps will be hidden while the single/dual Finder pane gets dis
 
 #### Reverse panes
 
-Reverse the contents of the primary (left) and secondary (right) panes in the dual pane mode (default = `unchecked`).
+Reverse the contents of the primary (left/top) and secondary (right/bottom) panes in the dual pane mode (default = `unchecked`).
 
 ## Author
 
