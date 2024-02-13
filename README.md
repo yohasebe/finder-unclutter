@@ -20,7 +20,6 @@ An Alfred 🎩 workflow that removes duplicate Finder tabs and windows and arran
 
 - [Alfred 5](https://www.alfredapp.com/) with Powerpack
 - Set `language` to `English` in the Finder setting
-- Hide `Status Bar` in the Finder menu (for proper vertical placement)
 
 > **IMPORTANT**: This Workflow only functions properly if the language setting of **Finder.app** is set to **English** due to the way it interacts with Finder's interface. You must either select English in `Language & Region / Preferred Languages`, or set the language setting of Finder.app to English in `Language & Region / Applications`. A system restart may be required after changing these settings.
 
