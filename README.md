@@ -41,7 +41,7 @@ The secondary pane will contain only one tab that displays the user-specified co
 
 The dual Finder pane can be placed in either `center (horizontal)`, `center (vertical)`, `fill (horizontal)`, `fill (vertical)`, `left`, `right`, `top`, or `bottom`. You can either specify the area either by using hotkeys, or by selecting one on running the workflow.
 
-<img src="./images/dual-pane-position.png" width=400>
+<img src="./images/dual-pane-position.png" width=500>
 
 #### <img src="./icons/mini-single-pane.png" width=32> Unclutter → Single-Pane
 
@@ -49,7 +49,7 @@ Finder tabs/windows will be organized into a single Finder window. All existing 
 
 The dual Finder pane can be placed in either `center`, `fill`, `left`, `right`, `top`, or `bottom`. You can either specify the area either by using hotkeys, or by selecting one on running the workflow.
 
-<img src="./images/single-pane-position.png" width=400>
+<img src="./images/single-pane-position.png" width=500>
 
 #### <img src="./icons/mini-toggle.png" width=32> Toggle Show/Hide Finder Windows
 
@@ -63,7 +63,7 @@ This will close all the non-current Finder tabs and windows.
 
 This will close all the Finder tabs and windows including the current one. A confirmation dialog pops up.
 
-<img src="./images/close-all.png" width=200>
+<img src="./images/close-all.png" width=300>
 
 #### <img src="./icons/mini-finder-unclutter.png" width=32> Open Config
 
