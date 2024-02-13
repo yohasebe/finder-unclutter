@@ -19,15 +19,27 @@ An Alfred 🎩 workflow that removes duplicate Finder tabs and windows and arran
 ## Requirements
 
 - [Alfred 5](https://www.alfredapp.com/) with Powerpack
-- Set `language` to `English` in the Finder setting
-
-> **IMPORTANT**: This Workflow only functions properly if the language setting of **Finder.app** is set to **English** due to the way it interacts with Finder's interface. You must either select English in `Language & Region / Preferred Languages`, or set the language setting of Finder.app to English in `Language & Region / Applications`. A system restart may be required after changing these settings.
 
 This workflow has been developed and tested on macOS Sonoma 14.3.
 
 ## Installation
 
-To install, download [Finder Unclutter Alfred Workflow](https://github.com/yohasebe/finder-unclutter/raw/main/finder-unclutter.alfredworkflow) (version 0.1.1)
+To install, download [Finder Unclutter Alfred Workflow](https://github.com/yohasebe/finder-unclutter/raw/main/finder-unclutter.alfredworkflow) (version 0.1.2)
+
+## Setting up
+
+This Workflow only functions properly if the language setting of Finder.app is set to **English** due to the way it interacts with Finder's interface.
+
+When this Workflow is launched, if the language of Finder.app is not English (`en`), a dialog will be displayed. Clicking OK will automatically change the language setting of Finder.app to English.
+
+<img src="./images/language-change-dialog.png" width=200>&nbsp;&nbsp; 
+<img src="./images/language-changed.png" width=200>
+
+If you want to revert the language setting of Finder back to its original state, you can do so in macOS's `System Settings` under `Language & Region` / `Applications`. A system restart may be required after changing these settings. Alternatively, you can revert it by executing the following command. Please specify `LANG_CODE` in the [ISO 639-1](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html) format as appropriate.
+
+```
+defaults write com.apple.Finder AppleLanguages '("LANG_CODE")'; killall Finder
+```
 
 ## Features
 
@@ -63,7 +75,7 @@ This will close all the non-current Finder tabs and windows.
 
 This will close all the Finder tabs and windows including the current one. A confirmation dialog pops up.
 
-<img src="./images/close-all.png" width=300>
+<img src="./images/close-all.png" width=200>
 
 #### <img src="./icons/mini-finder-unclutter.png" width=32> Open Config
 
