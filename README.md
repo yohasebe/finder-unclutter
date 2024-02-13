@@ -12,7 +12,6 @@ An Alfred 🎩 workflow that removes duplicate Finder tabs and windows and arran
 - **Organize** Finder in a single/dual pane layout
 - **Position** Finder in a specified area of the desktop
 
-
 <img src="./images/screenshot.png" width=600>
 
 <img src="./images/finder-unclutter.gif" width=680>
@@ -87,7 +86,7 @@ If set to `single`, the sidebar is shown only in the left-hand side Finder windo
 
 Specifies the UNIX path of a new folder to open when no Finder window is present (default = `~`).
 
-#### View type in primary pane 
+#### View type in primary pane
 
 The finder view type used on the primary pane (`list`, `icon`, `column`, or `gallery`, default = `list`).
 
@@ -96,7 +95,7 @@ The finder view type used on the primary pane (`list`, `icon`, `column`, or `gal
 
 The finder view type used on the secondary pane (`list`, `icon`, `column`, or `gallery`, default = `list`).
 
-#### Contents on secondary pane 
+#### Contents on secondary pane
 
 The contents presented on the secondary pane (`same as primary`, `home`, `parent`,  `desktop`, default = `parent`)
 
