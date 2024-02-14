@@ -24,7 +24,7 @@ This workflow has been developed and tested on macOS Sonoma 14.3.
 
 ## Installation
 
-To install, download [Finder Unclutter Alfred Workflow](https://github.com/yohasebe/finder-unclutter/raw/main/finder-unclutter.alfredworkflow) (version 0.1.2)
+To install, download [Finder Unclutter Alfred Workflow](https://github.com/yohasebe/finder-unclutter/raw/main/finder-unclutter.alfredworkflow) (version 0.1.3)
 
 ## Setting up
 
