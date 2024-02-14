@@ -4,7 +4,7 @@ An Alfred 🎩 workflow that removes duplicate Finder tabs and windows and arran
 
 <img src="./icons/finder-unclutter@2x.png" width=150>
 
-**Finder Unclutter** does the folloing all at once:
+**Finder Unclutter** does the following all at once:
 
 - **Unminimize** all Finder windows
 - **Unduplicate** all Finder tabs
