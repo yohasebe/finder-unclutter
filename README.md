@@ -24,7 +24,12 @@ This workflow has been developed and tested on macOS Sonoma 14.3.
 
 ## Installation
 
-To install, download [Finder Unclutter Alfred Workflow](https://github.com/yohasebe/finder-unclutter/raw/main/finder-unclutter.alfredworkflow) (version 0.1.4)
+To install, download [Finder Unclutter Alfred Workflow](https://github.com/yohasebe/finder-unclutter/raw/main/finder-unclutter.alfredworkflow) (version 0.1.5)
+
+## Change Log
+
+- 0.1.5 (2025-02-04)
+  - Show Desktop menu item added
 
 ## Setting up
 
@@ -77,6 +82,10 @@ This will close all the Finder tabs and windows including the current one. A con
 
 <img src="./images/close-all.png" width=200>
 
+#### <img src="./icons/show-desktop.png" width=32> Show Desktop
+
+Show Desktop using Mission Control's "Show Desktop" feature. Use the `show_desktop_keycode` environment variable if you want to change the default key code (`103`).
+
 #### <img src="./icons/mini-finder-unclutter.png" width=32> Open Config
 
 For details on each of the configurable parameters, see [below](#configuration).
@@ -121,6 +130,11 @@ If checked, other apps will be hidden while the single/dual Finder pane gets dis
 #### Reverse panes
 
 Reverse the contents of the primary (left/top) and secondary (right/bottom) panes in the dual pane mode (default = `unchecked`).
+
+## Environment Variables
+
+- `show_desktop_keycode`: The keycode of the key assigned to Mission Control's "Show Desktop" (default = `103`).
+- `wait_in_seconds`: The number of seconds to wait before each Finder window operation is executed (default = `0.5`).
 
 ## Author
 
