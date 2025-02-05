@@ -24,11 +24,11 @@ This workflow has been developed and tested on macOS Sonoma 14.3.
 
 ## Installation
 
-To install, download [Finder Unclutter Alfred Workflow](https://github.com/yohasebe/finder-unclutter/raw/main/finder-unclutter.alfredworkflow) (version 0.1.5)
+To install, download [Finder Unclutter Alfred Workflow](https://github.com/yohasebe/finder-unclutter/raw/main/finder-unclutter.alfredworkflow) (version 0.1.6)
 
 ## Change Log
 
-- 0.1.5 (2025-02-04)
+- 0.1.6 (2025-02-04)
   - Show Desktop menu item added
 
 ## Setting up
