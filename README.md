@@ -20,14 +20,17 @@ An Alfred 🎩 workflow that removes duplicate Finder tabs and windows and arran
 
 - [Alfred 5](https://www.alfredapp.com/) with Powerpack
 
-This workflow has been developed and tested on macOS Sonoma 14.3.
+This workflow has been developed and tested on macOS Sonoma and macOS Tahoe.
 
 ## Installation
 
-To install, download [Finder Unclutter Alfred Workflow](https://github.com/yohasebe/finder-unclutter/raw/main/finder-unclutter.alfredworkflow) (version 0.1.6)
+To install, download [Finder Unclutter Alfred Workflow](https://github.com/yohasebe/finder-unclutter/raw/main/finder-unclutter.alfredworkflow) (version 1.7)
 
 ## Change Log
 
+- 1.7 (2025-09-22)
+  - Center horizontal dual-pane layout now balances both panes by offsetting the left pane with the measured Finder sidebar width.
+  - Smart Folder tabs are preserved while transient search results remain excluded when windows are rebuilt.
 - 0.1.6 (2025-02-04)
   - Show Desktop menu item added
 
@@ -45,6 +48,21 @@ If you want to revert the language setting of Finder back to its original state,
 ```
 defaults write com.apple.Finder AppleLanguages '("LANG_CODE")'; killall Finder
 ```
+
+## macOS Permissions
+
+On first run macOS prompts for automation access. Approve the dialogs for **Alfred** so it can control **Finder** and **System Events**. If the prompts were dismissed, open `System Settings → Privacy & Security` and enable:
+
+- `Accessibility`: allow Alfred to control the computer.
+- `Automation`: under Alfred, check Finder and System Events.
+
+The workflow writes to `com.apple.Finder AppleLanguages` when switching Finder to English and automatically restarts Finder via `killall Finder`.
+
+## Troubleshooting
+
+- Finder still opens in the previous language: rerun the workflow and accept the language change, or manually set Finder to English in `System Settings → Language & Region → Applications`.
+- Windows do not merge completely: increase `wait_in_seconds` in the workflow configuration so Finder has more time to reopen slow network or external volumes before merging.
+- Automation prompts reappear or automation steps fail: recheck Alfred under `Privacy & Security → Accessibility` and `Automation`, then restart Alfred and Finder.
 
 ## Features
 
