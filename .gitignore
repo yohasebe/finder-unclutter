@@ -92,4 +92,5 @@ Gemfile.lock
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,ruby
 AGENTS.md
+CLAUDE.md
 source/
