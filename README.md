@@ -24,10 +24,13 @@ This workflow has been developed and tested on macOS Sonoma and macOS Tahoe.
 
 ## Installation
 
-To install, download [Finder Unclutter Alfred Workflow](https://github.com/yohasebe/finder-unclutter/raw/main/finder-unclutter.alfredworkflow) (version 1.7)
+To install, download [Finder Unclutter Alfred Workflow](https://github.com/yohasebe/finder-unclutter/raw/main/finder-unclutter.alfredworkflow) (version 1.8)
 
 ## Change Log
 
+- 1.8 (2025-10-26)
+  - Added configurable delays to AppleScript operations for improved stability
+  - Delay timings can be adjusted via environment variables
 - 1.7 (2025-09-22)
   - Center horizontal dual-pane layout now balances both panes by offsetting the left pane with the measured Finder sidebar width.
   - Smart Folder tabs are preserved while transient search results remain excluded when windows are rebuilt.
@@ -152,7 +155,10 @@ Reverse the contents of the primary (left/top) and secondary (right/bottom) pane
 ## Environment Variables
 
 - `show_desktop_keycode`: The keycode of the key assigned to Mission Control's "Show Desktop" (default = `103`).
-- `wait_in_seconds`: The number of seconds to wait before each Finder window operation is executed (default = `0.5`).
+- `wait_in_seconds`: Delay between steps when arranging dual-pane layout (default = `0.1`). Increase if network drives or external volumes don't load in time.
+- `delay_system_events_launch`: Delay after launching System Events before GUI operations (default = `0.2`). Increase if menu operations fail to execute.
+- `delay_menu_operation`: Delay after clicking menu items like "Merge All Windows" (default = `0.3`). Increase if operations are not completed properly.
+- `delay_window_operation`: Delay after window open/close operations (default = `0.2`). Increase if windows don't fully load before next operation.
 
 ## Author
 
