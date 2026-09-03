@@ -1,0 +1,4737 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.yohasebe.finder.unclutter</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>02D137EC-EC22-4DA1-93E5-84BFE6075E3E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0F68AAC7-EEA5-4D70-82CB-52D9589053CD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>06333535-E592-4267-BB61-C200A5732B3E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F1E951E9-9AE4-4860-B38E-0E98EDB68930</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>0F68AAC7-EEA5-4D70-82CB-52D9589053CD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E594ADD6-8F06-46D3-A543-91326D9F536D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>14372416-A42A-4672-B666-1A4F7E948846</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F9A0EA61-045E-470A-9676-99F386386B4E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>1775772B-6D64-40C2-AACF-BEDEBD81E3D2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4A4DF7A4-082B-490D-89A1-F5508725E88B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>192FA874-2EF4-445D-B9A3-91E37C9E8629</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>663E076A-FF78-4603-B4E2-40E1374DDC0D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>1C01D3A9-93AE-40AC-81DC-9A001BFC22DE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F1E951E9-9AE4-4860-B38E-0E98EDB68930</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>29057A8E-1F86-4F14-A164-450EC5F15461</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F9A0EA61-045E-470A-9676-99F386386B4E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>40A64B13-6F9E-4273-B184-57B6EE7DA66A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C62D3264-F63F-4E1A-91E9-C6AA59923B7F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>7CECB9AD-1D67-4C98-BD5B-6DA3BB14FAFD</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>E0B66618-E07B-49DD-BA7E-3DB533FA6982</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>4A4DF7A4-082B-490D-89A1-F5508725E88B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>40A64B13-6F9E-4273-B184-57B6EE7DA66A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>7CECB9AD-1D67-4C98-BD5B-6DA3BB14FAFD</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>603A4983-1A70-4DA6-A7B2-820FF4FD5039</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>4DB44DA2-58F0-46E2-920E-71B0BCDAD222</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2434B5D1-F72E-414C-A54E-C6AABCF098BB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>33F43024-D5B4-4EDB-8901-298BE16F6854</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>52F99AAF-EBFA-4B71-AFA8-24BB9B4C01BA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>694E5D71-3095-42DF-80D4-A5290B9C55BC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5FB3350F-C392-4996-9806-1312E5482BCC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>02D137EC-EC22-4DA1-93E5-84BFE6075E3E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>602ABC6D-3B73-4C2F-A166-170852176784</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D786CBC8-E75A-42DA-845D-A74401D86DD6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>603A4983-1A70-4DA6-A7B2-820FF4FD5039</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EAC50034-127C-4901-BEB1-94AD94930716</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>7CECB9AD-1D67-4C98-BD5B-6DA3BB14FAFD</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>9C68A7A5-D136-42B3-AB7C-398A8139641D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>7CECB9AD-1D67-4C98-BD5B-6DA3BB14FAFD</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>4DB44DA2-58F0-46E2-920E-71B0BCDAD222</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>7ABA21D5-7E58-4E8C-88CA-23265D529C5E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>66740EBF-8D95-40D7-8738-D72EDAA5D569</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>603A4983-1A70-4DA6-A7B2-820FF4FD5039</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>694E5D71-3095-42DF-80D4-A5290B9C55BC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0F68AAC7-EEA5-4D70-82CB-52D9589053CD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>69967A07-C457-4CB4-8D09-E99FDB541AC1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>70ECF995-3141-4006-B0B4-E98F03D333F3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>_button1</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6E40A959-6DAC-4D8D-9FFA-207095598497</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DC3D71E7-DD9B-4BED-86DF-B6F4B9792B9D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>74707476-EE51-42B7-A02E-68100C055827</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>603A4983-1A70-4DA6-A7B2-820FF4FD5039</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>75980A59-5206-4DB5-9F2E-88C00FCBEACF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>694E5D71-3095-42DF-80D4-A5290B9C55BC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>79C49BE5-DA02-418E-854B-E82D54F5599D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>02D137EC-EC22-4DA1-93E5-84BFE6075E3E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>7ABA21D5-7E58-4E8C-88CA-23265D529C5E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E89C3AE5-8AEF-46F3-9DE4-AE73A04D7724</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>7D771252-D04E-4B29-80B9-DF08A11D8EA4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>91A3A96E-A6E1-4E92-9C20-68F21B90F250</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>80BD1FC0-A34A-4C84-B635-F6B4F9E53399</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>02D137EC-EC22-4DA1-93E5-84BFE6075E3E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>8F900970-BC72-4DC1-807E-537E8D112242</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>69967A07-C457-4CB4-8D09-E99FDB541AC1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>92685AB4-3C36-4BB7-8B58-933F02105089</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F9A0EA61-045E-470A-9676-99F386386B4E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>987D0535-F7A9-49B2-A8AE-BB9A3CE7151F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F1E951E9-9AE4-4860-B38E-0E98EDB68930</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>3604DC31-FBEC-4349-B213-BCC984B87A33</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>F1E951E9-9AE4-4860-B38E-0E98EDB68930</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>87EF6069-6D46-41BE-9780-8073310FCB71</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>AD791D09-B3A5-48E1-BEFF-0435E9EEAB3A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>00FE549C-7CFB-483A-937F-EEAD39CE8BDE</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>C99932BF-F500-4811-AB0C-B447B4EB960D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>9C68A7A5-D136-42B3-AB7C-398A8139641D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D4731FD4-CAC0-48A1-99F7-07F235D13ACE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>33F43024-D5B4-4EDB-8901-298BE16F6854</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>AFC59036-5E36-4F28-A452-F7DADFDE3057</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>694E5D71-3095-42DF-80D4-A5290B9C55BC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B580713D-0F37-45A6-BC5F-90A3A5DEC732</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>99483FC5-AB90-440E-9150-F66FBE2589E7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>E9686983-CFFB-42C7-AC8B-1618E5DB0122</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C1792E7D-79AF-4A2D-9902-8B3842E436C9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4A4DF7A4-082B-490D-89A1-F5508725E88B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C62D3264-F63F-4E1A-91E9-C6AA59923B7F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>74707476-EE51-42B7-A02E-68100C055827</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C99932BF-F500-4811-AB0C-B447B4EB960D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FDF82BE7-DE6C-4C5E-A6B9-912747422320</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D3C8E3EB-F514-4785-9B76-D4664FFFFA0E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F9A0EA61-045E-470A-9676-99F386386B4E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D786CBC8-E75A-42DA-845D-A74401D86DD6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>987D0535-F7A9-49B2-A8AE-BB9A3CE7151F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>DACAEF3F-E4F0-4C24-8FC0-390740BC3673</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F9A0EA61-045E-470A-9676-99F386386B4E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E0B66618-E07B-49DD-BA7E-3DB533FA6982</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FBA27933-4D1E-4114-B687-11563BA6E7C1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E594ADD6-8F06-46D3-A543-91326D9F536D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>603A4983-1A70-4DA6-A7B2-820FF4FD5039</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E89C3AE5-8AEF-46F3-9DE4-AE73A04D7724</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DB194341-1ECD-4A31-AAF9-4A62A3BB31F1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>B9C1809B-CFC7-4B51-90AF-5ED974FE27AA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>EAC50034-127C-4901-BEB1-94AD94930716</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B580713D-0F37-45A6-BC5F-90A3A5DEC732</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>EB1F21E2-9C79-43F0-B879-D81DA17D3ED5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>694E5D71-3095-42DF-80D4-A5290B9C55BC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>ED534B8E-4D9D-4C1E-BD3E-64CE6112C4D3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>02D137EC-EC22-4DA1-93E5-84BFE6075E3E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F1E951E9-9AE4-4860-B38E-0E98EDB68930</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FDF82BE7-DE6C-4C5E-A6B9-912747422320</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F9A0EA61-045E-470A-9676-99F386386B4E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>74707476-EE51-42B7-A02E-68100C055827</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>FBA27933-4D1E-4114-B687-11563BA6E7C1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>66740EBF-8D95-40D7-8738-D72EDAA5D569</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>FBEBC376-B9AA-4D52-B667-E637B1C3D1DB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F9A0EA61-045E-470A-9676-99F386386B4E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>FDF82BE7-DE6C-4C5E-A6B9-912747422320</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>663E076A-FF78-4603-B4E2-40E1374DDC0D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>24B7A4A6-AEE4-4B76-BC4E-7A19EED17BB3</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>1775772B-6D64-40C2-AACF-BEDEBD81E3D2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>229C42E7-5980-4A3A-9EA0-9B66109D88E6</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>C1792E7D-79AF-4A2D-9902-8B3842E436C9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>1E71793E-30D9-407A-A023-3708375C60CA</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>F581DD95-1580-4E0B-92D6-CEACE22EB113</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>F41A627E-6642-4297-A779-95E933E87188</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>91A3A96E-A6E1-4E92-9C20-68F21B90F250</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>87FCB770-BA99-4DCB-8658-DBDE0A06AD54</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>69967A07-C457-4CB4-8D09-E99FDB541AC1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>CC8CFFC0-D2A2-479F-ACE7-E61066634A33</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Yoichiro Hasebe</string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Finder Unclutter</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>3</integer>
+				<key>argumenttext</key>
+				<string>left</string>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>92685AB4-3C36-4BB7-8B58-933F02105089</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>3</integer>
+				<key>argumenttext</key>
+				<string>top</string>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>FBEBC376-B9AA-4D52-B667-E637B1C3D1DB</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>3</integer>
+				<key>argumenttext</key>
+				<string>center</string>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>29057A8E-1F86-4F14-A164-450EC5F15461</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>3</integer>
+				<key>argumenttext</key>
+				<string>right</string>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>DACAEF3F-E4F0-4C24-8FC0-390740BC3673</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>3</integer>
+				<key>argumenttext</key>
+				<string>bottom</string>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>14372416-A42A-4672-B666-1A4F7E948846</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>3</integer>
+				<key>argumenttext</key>
+				<string>fill</string>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>D3C8E3EB-F514-4785-9B76-D4664FFFFA0E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>mode</key>
+					<string>single pane</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>F9A0EA61-045E-470A-9676-99F386386B4E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>3</integer>
+				<key>argumenttext</key>
+				<string>single_pane</string>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>1C01D3A9-93AE-40AC-81DC-9A001BFC22DE</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>script</key>
+				<string>-- Place the front Finder window in one region of the screen it already lives on.
+
+use framework "AppKit"
+use scripting additions
+
+on run argv
+	set positionName to my envText("single_pane_window_position", "fill")
+	set viewName to my envText("view_type_primary", "list")
+	set sidebarPixels to my envNumber("sidebar_width", 200)
+	if my envText("sidebars", "single") is "none" then set sidebarPixels to 0
+
+	-- Read the screen before opening anything, so an existing window's display
+	-- decides the layout rather than wherever Finder drops a brand new window.
+	set targetRect to my regionForPosition(positionName, my activeUsableRect())
+
+	tell application "Finder"
+		activate
+		if (count of Finder windows) is 0 then
+			set homeAlias to my homeFolderAlias()
+			if homeAlias is missing value then
+				my reportBadHomeFolder()
+				return
+			end if
+			make new Finder window to homeAlias
+			my pauseFor("wait_in_seconds", 0.1)
+		end if
+		set theWindow to front Finder window
+	end tell
+
+	-- Chrome first: Finder will not shrink a window below its sidebar plus a
+	-- minimum content area, so the sidebar has to be settled before the bounds.
+	my applyChrome(theWindow, viewName, sidebarPixels)
+	tell application "Finder" to set bounds of theWindow to my boundsOfRect(targetRect)
+end run
+
+-- Alfred exposes workflow variables as environment variables. `system attribute`
+-- yields "" for anything unset, and "" as number raises, so every read goes
+-- through these helpers with an explicit fallback.
+
+on envText(keyName, fallbackValue)
+	try
+		set rawValue to system attribute keyName
+		if rawValue is missing value then return fallbackValue
+		if rawValue is "" then return fallbackValue
+		return rawValue
+	on error
+		return fallbackValue
+	end try
+end envText
+
+on envNumber(keyName, fallbackValue)
+	try
+		return (my envText(keyName, "")) as number
+	on error
+		return fallbackValue
+	end try
+end envNumber
+
+on envFlag(keyName)
+	set rawValue to my envText(keyName, "0")
+	return rawValue is "1" or rawValue is "true"
+end envFlag
+
+on pauseFor(keyName, fallbackValue)
+	set waitSeconds to my envNumber(keyName, fallbackValue)
+	if waitSeconds &gt; 0 then delay waitSeconds
+end pauseFor
+-- Screen geometry, in Finder's coordinate space.
+--
+-- NSScreen reports rects with the origin at the bottom-left of the primary
+-- display and y growing upward. Finder's `bounds` and System Events' `position`
+-- both put the origin at the top-left of the primary display with y growing
+-- downward. Everything here returns the Finder convention as
+-- {left, top, width, height}.
+--
+-- Reading NSScreen also replaces the old `system_profiler SPDisplaysDataType`
+-- call, which cost several seconds on the first run after a reboot, and gives us
+-- visibleFrame -- the area left over once the menu bar and a pinned Dock are
+-- taken out -- so no menu bar height has to be guessed at.
+
+on screenRects()
+	set nsScreens to current application's NSScreen's screens()
+	if (count of nsScreens) is 0 then return {}
+	set primaryHeight to item 2 of item 2 of ((item 1 of nsScreens)'s frame())
+	set rectList to {}
+	repeat with aScreen in nsScreens
+		set fullRect to my toFinderRect(aScreen's frame(), primaryHeight)
+		set usableRect to my toFinderRect(aScreen's visibleFrame(), primaryHeight)
+		set end of rectList to {fullArea:fullRect, usableArea:usableRect}
+	end repeat
+	return rectList
+end screenRects
+
+on toFinderRect(nsRect, primaryHeight)
+	set originX to item 1 of item 1 of nsRect
+	set originY to item 2 of item 1 of nsRect
+	set rectWidth to item 1 of item 2 of nsRect
+	set rectHeight to item 2 of item 2 of nsRect
+	return {originX, primaryHeight - (originY + rectHeight), rectWidth, rectHeight}
+end toFinderRect
+
+on usableRectContaining(pointX, pointY)
+	set rectList to my screenRects()
+	if rectList is {} then return {0, 0, 1440, 900}
+	repeat with anEntry in rectList
+		set {rectLeft, rectTop, rectWidth, rectHeight} to fullArea of anEntry
+		if pointX ≥ rectLeft and pointX &lt; rectLeft + rectWidth then
+			if pointY ≥ rectTop and pointY &lt; rectTop + rectHeight then
+				return usableArea of anEntry
+			end if
+		end if
+	end repeat
+	return usableArea of (item 1 of rectList)
+end usableRectContaining
+
+-- The screen the user is working on: the one holding the front Finder window,
+-- or the one under the pointer when no window is open. The old code always used
+-- whichever display system_profiler happened to list first, which dragged
+-- windows back to the primary display.
+on activeUsableRect()
+	try
+		tell application "Finder"
+			if (count of Finder windows) &gt; 0 then
+				set frontBounds to bounds of front Finder window
+				set centreX to ((item 1 of frontBounds) + (item 3 of frontBounds)) / 2
+				set centreY to ((item 2 of frontBounds) + (item 4 of frontBounds)) / 2
+				return my usableRectContaining(centreX, centreY)
+			end if
+		end tell
+	end try
+	try
+		set nsScreens to current application's NSScreen's screens()
+		set primaryHeight to item 2 of item 2 of ((item 1 of nsScreens)'s frame())
+		set mouseAt to current application's NSEvent's mouseLocation()
+		return my usableRectContaining(item 1 of mouseAt, primaryHeight - (item 2 of mouseAt))
+	end try
+	return my usableRectContaining(0, 0)
+end activeUsableRect
+
+-- Carve out the part of a screen a layout keyword refers to. Both the single and
+-- the dual pane layouts start here; the dual pane then splits the result in two.
+on regionForPosition(positionName, usableRect)
+	set {rectLeft, rectTop, rectWidth, rectHeight} to usableRect
+	if positionName is "left" then
+		return {rectLeft, rectTop, rectWidth / 2, rectHeight}
+	else if positionName is "right" then
+		return {rectLeft + rectWidth / 2, rectTop, rectWidth / 2, rectHeight}
+	else if positionName is "top" then
+		return {rectLeft, rectTop, rectWidth, rectHeight / 2}
+	else if positionName is "bottom" then
+		return {rectLeft, rectTop + rectHeight / 2, rectWidth, rectHeight / 2}
+	else if positionName is "center" then
+		return {rectLeft + rectWidth / 6, rectTop + rectHeight / 6, rectWidth * 2 / 3, rectHeight * 2 / 3}
+	end if
+	return {rectLeft, rectTop, rectWidth, rectHeight} -- "fill", and anything unrecognised
+end regionForPosition
+
+on boundsOfRect(aRect)
+	set {rectLeft, rectTop, rectWidth, rectHeight} to aRect
+	return {round rectLeft, round rectTop, round (rectLeft + rectWidth), round (rectTop + rectHeight)}
+end boundsOfRect
+-- Folder resolution and per-window chrome shared by the pane layouts.
+
+-- The configured home folder is a UNIX path typed by the user, so it may start
+-- with "~" and may contain spaces. Resolving it to an alias here means no part of
+-- the workflow has to hand-escape it for a shell.
+on expandTilde(pathText)
+	if pathText does not start with "~" then return pathText
+	set homeDirectory to POSIX path of (path to home folder)
+	if homeDirectory ends with "/" then set homeDirectory to text 1 thru -2 of homeDirectory
+	if pathText is "~" then return homeDirectory
+	if pathText starts with "~/" then return homeDirectory &amp; (text 2 thru -1 of pathText)
+	return pathText
+end expandTilde
+
+on folderAliasFor(pathText)
+	try
+		return (POSIX file (my expandTilde(pathText))) as alias
+	on error
+		return missing value
+	end try
+end folderAliasFor
+
+on homeFolderAlias()
+	return my folderAliasFor(my envText("home_folder", "~"))
+end homeFolderAlias
+
+on reportBadHomeFolder()
+	try
+		tell application id "com.runningwithcrayons.Alfred" to run trigger "stop" in workflow "com.yohasebe.finder.unclutter"
+	end try
+	tell application "Finder" to activate
+	display dialog "The folder set as \"Home Folder\" in the workflow configuration does not exist. Please check the configuration." buttons {"OK"} default button "OK" with title "Finder Unclutter" with icon caution
+end reportBadHomeFolder
+
+-- What the secondary pane should show, given the window that holds the primary
+-- pane's folder.
+on secondaryTargetFor(primaryWindow)
+	set secondaryMode to my envText("folder_secondary", "same")
+	if secondaryMode is "home" then
+		set homeAlias to my homeFolderAlias()
+		if homeAlias is not missing value then return homeAlias
+	else if secondaryMode is "desktop" then
+		try
+			return (path to desktop folder) as alias
+		end try
+	else if secondaryMode is "parent" then
+		try
+			tell application "Finder" to return (container of (target of primaryWindow)) as alias
+		end try
+		try
+			return (POSIX file "/") as alias
+		end try
+	end if
+	-- Anything else -- "same", or "left", the value older prefs.plist files
+	-- carry for "same as primary" -- mirrors the primary pane.
+	tell application "Finder" to return target of primaryWindow
+end secondaryTargetFor
+
+on viewConstantFor(viewName)
+	tell application "Finder"
+		if viewName is "icon" then return icon view
+		if viewName is "column" then return column view
+		if viewName is "gallery" then return flow view
+		return list view
+	end tell
+end viewConstantFor
+
+-- Sidebar width only takes effect on the frontmost window, hence the `set index`
+-- before it.
+on applyChrome(theWindow, viewName, sidebarPixels)
+	tell application "Finder"
+		set toolbar visible of theWindow to true
+		set pathbar visible of theWindow to true
+		set statusbar visible of theWindow to true
+		try
+			set current view of theWindow to my viewConstantFor(viewName)
+		end try
+		set index of theWindow to 1
+		try
+			set sidebar width of theWindow to sidebarPixels
+		end try
+	end tell
+end applyChrome</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>B580713D-0F37-45A6-BC5F-90A3A5DEC732</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>3</integer>
+				<key>hotmod</key>
+				<integer>1179648</integer>
+				<key>hotstring</key>
+				<string>F</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>192FA874-2EF4-445D-B9A3-91E37C9E8629</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>-- Merge step ahead of the single pane layout: every folder stays as a tab.
+
+use scripting additions
+
+on run argv
+	my mergeIntoTabs(false)
+end run
+
+-- Alfred exposes workflow variables as environment variables. `system attribute`
+-- yields "" for anything unset, and "" as number raises, so every read goes
+-- through these helpers with an explicit fallback.
+
+on envText(keyName, fallbackValue)
+	try
+		set rawValue to system attribute keyName
+		if rawValue is missing value then return fallbackValue
+		if rawValue is "" then return fallbackValue
+		return rawValue
+	on error
+		return fallbackValue
+	end try
+end envText
+
+on envNumber(keyName, fallbackValue)
+	try
+		return (my envText(keyName, "")) as number
+	on error
+		return fallbackValue
+	end try
+end envNumber
+
+on envFlag(keyName)
+	set rawValue to my envText(keyName, "0")
+	return rawValue is "1" or rawValue is "true"
+end envFlag
+
+on pauseFor(keyName, fallbackValue)
+	set waitSeconds to my envNumber(keyName, fallbackValue)
+	if waitSeconds &gt; 0 then delay waitSeconds
+end pauseFor
+-- Folder resolution and per-window chrome shared by the pane layouts.
+
+-- The configured home folder is a UNIX path typed by the user, so it may start
+-- with "~" and may contain spaces. Resolving it to an alias here means no part of
+-- the workflow has to hand-escape it for a shell.
+on expandTilde(pathText)
+	if pathText does not start with "~" then return pathText
+	set homeDirectory to POSIX path of (path to home folder)
+	if homeDirectory ends with "/" then set homeDirectory to text 1 thru -2 of homeDirectory
+	if pathText is "~" then return homeDirectory
+	if pathText starts with "~/" then return homeDirectory &amp; (text 2 thru -1 of pathText)
+	return pathText
+end expandTilde
+
+on folderAliasFor(pathText)
+	try
+		return (POSIX file (my expandTilde(pathText))) as alias
+	on error
+		return missing value
+	end try
+end folderAliasFor
+
+on homeFolderAlias()
+	return my folderAliasFor(my envText("home_folder", "~"))
+end homeFolderAlias
+
+on reportBadHomeFolder()
+	try
+		tell application id "com.runningwithcrayons.Alfred" to run trigger "stop" in workflow "com.yohasebe.finder.unclutter"
+	end try
+	tell application "Finder" to activate
+	display dialog "The folder set as \"Home Folder\" in the workflow configuration does not exist. Please check the configuration." buttons {"OK"} default button "OK" with title "Finder Unclutter" with icon caution
+end reportBadHomeFolder
+
+-- What the secondary pane should show, given the window that holds the primary
+-- pane's folder.
+on secondaryTargetFor(primaryWindow)
+	set secondaryMode to my envText("folder_secondary", "same")
+	if secondaryMode is "home" then
+		set homeAlias to my homeFolderAlias()
+		if homeAlias is not missing value then return homeAlias
+	else if secondaryMode is "desktop" then
+		try
+			return (path to desktop folder) as alias
+		end try
+	else if secondaryMode is "parent" then
+		try
+			tell application "Finder" to return (container of (target of primaryWindow)) as alias
+		end try
+		try
+			return (POSIX file "/") as alias
+		end try
+	end if
+	-- Anything else -- "same", or "left", the value older prefs.plist files
+	-- carry for "same as primary" -- mirrors the primary pane.
+	tell application "Finder" to return target of primaryWindow
+end secondaryTargetFor
+
+on viewConstantFor(viewName)
+	tell application "Finder"
+		if viewName is "icon" then return icon view
+		if viewName is "column" then return column view
+		if viewName is "gallery" then return flow view
+		return list view
+	end tell
+end viewConstantFor
+
+-- Sidebar width only takes effect on the frontmost window, hence the `set index`
+-- before it.
+on applyChrome(theWindow, viewName, sidebarPixels)
+	tell application "Finder"
+		set toolbar visible of theWindow to true
+		set pathbar visible of theWindow to true
+		set statusbar visible of theWindow to true
+		try
+			set current view of theWindow to my viewConstantFor(viewName)
+		end try
+		set index of theWindow to 1
+		try
+			set sidebar width of theWindow to sidebarPixels
+		end try
+	end tell
+end applyChrome
+-- Collapse every open Finder window and tab into one window carrying one tab per
+-- distinct folder.
+--
+-- Finder surfaces each tab as its own `Finder window` in AppleScript and offers
+-- no way to ask which window a tab belongs to; background tabs even keep
+-- reporting the bounds they had before their window was moved. System Events, by
+-- contrast, sees only real windows, so the count it reports is what tells us
+-- whether everything already lives in one window.
+--
+-- Tabs are built with Cmd-T plus `set target`, not with the Window menu's
+-- "Merge All Windows". That item is unreliable: on macOS 26 Finder reports it as
+-- disabled and ignores both `click` and AXPress even with several plain windows
+-- open, and its title is localised, which is why the workflow used to demand
+-- that Finder run in English. Cmd-T is a fixed shortcut in every language and
+-- works regardless of the "Prefer tabs when opening documents" setting.
+
+on mergeIntoTabs(dropSecondaryFolder)
+	set fallbackPath to my envText("home_folder", "~")
+	set frontPath to fallbackPath
+	set orderedPaths to {}
+	set duplicateSeen to false
+	set excludedSeen to false
+
+	tell application "Finder"
+		set openWindows to every Finder window
+		if (count of openWindows) is 0 then
+			activate
+			return
+		end if
+
+		set frontWindow to item 1 of openWindows
+		try
+			set frontPath to POSIX path of ((target of frontWindow) as alias)
+		end try
+
+		-- The dual pane opens the secondary folder in a window of its own, so
+		-- keeping it as a tab of the primary window too is just clutter. Never
+		-- exclude the primary folder itself, though: with folder_secondary =
+		-- "same" the secondary IS the primary folder, and dropping it here
+		-- would retarget the front tab to a folder the user did not choose.
+		set excludedPath to ""
+		if dropSecondaryFolder then
+			try
+				set candidatePath to POSIX path of ((my secondaryTargetFor(frontWindow)) as alias)
+				if candidatePath is not frontPath then set excludedPath to candidatePath
+			end try
+		end if
+
+		-- A window whose target will not coerce to an alias (a transient search
+		-- result) contributes no path and is never closed by the rebuild:
+		-- `set target` cannot recreate it. Saved Smart Folders (.savedSearch)
+		-- DO coerce -- their path is the search file -- so they flow through
+		-- orderedPaths like any folder and survive being rebuilt.
+		repeat with aWindow in openWindows
+			set aPath to ""
+			try
+				set aPath to POSIX path of ((target of aWindow) as alias)
+			end try
+			if aPath is not "" then
+				if aPath is excludedPath then
+					set excludedSeen to true
+				else if aPath is in orderedPaths then
+					set duplicateSeen to true
+				else
+					set end of orderedPaths to aPath
+				end if
+			end if
+		end repeat
+
+		if orderedPaths is {} then set orderedPaths to {frontPath}
+		activate
+	end tell
+
+	-- One real browser window, no duplicate tabs and nothing to exclude:
+	-- everything already lives in one window, so leave the user's tab order and
+	-- scroll positions alone. `excludedSeen` matters because the dual pane is
+	-- about to open that folder in its own window; without it the folder would
+	-- stay as a tab of the primary pane as well, which is the clutter excluding
+	-- it was meant to avoid.
+	-- realWindowCount() is -1 when System Events cannot answer (no Accessibility
+	-- permission); unverifiable means do not rebuild.
+	set realCount to my realWindowCount()
+	set needsRebuild to (realCount &gt; 1) or duplicateSeen or excludedSeen
+
+	if needsRebuild then my rebuildAsTabs(orderedPaths, excludedPath)
+end mergeIntoTabs
+
+-- Build first, destroy last. The originals stay open until every wanted tab
+-- really exists; if tab creation fails at any point (e.g. Cmd-T cannot fire
+-- without Accessibility permission) the rebuild aborts and closes nothing, so
+-- Finder is left untidy but intact rather than exploded into one window per
+-- folder.
+on rebuildAsTabs(orderedPaths, excludedPath)
+	set survivorID to missing value
+	set originalIDs to {}
+	-- Finder answers "busy" (-15260) while it has heavy work in flight (a Smart
+	-- Folder's Spotlight query, iCloud churn), so retry briefly. If it never
+	-- answers, abort before anything is built or closed.
+	repeat 10 times
+		try
+			tell application "Finder"
+				activate
+				set survivorID to id of front Finder window
+				set originalIDs to id of every Finder window
+			end tell
+			exit repeat
+		on error
+			delay 0.2
+		end try
+	end repeat
+	if survivorID is missing value then return
+
+	-- Point the survivor at the first folder. The guard is strict on purpose:
+	-- retarget only when the survivor's current target resolves to a path that
+	-- is part of the rebuild. Anything else -- a transient search, or a folder
+	-- that dropped out of orderedPaths because Finder was too busy to answer --
+	-- is left alone, because retargeting would destroy it.
+	try
+		tell application "Finder"
+			set survivorPath to POSIX path of ((target of Finder window id survivorID) as alias)
+			if (survivorPath is in orderedPaths) and (survivorPath is not (item 1 of orderedPaths)) then
+				set firstAlias to my folderAliasFor(item 1 of orderedPaths)
+				if firstAlias is not missing value then set target of Finder window id survivorID to firstAlias
+			end if
+		end tell
+	end try
+
+	-- New tabs land after the survivor window's existing tabs, and the old
+	-- ones are closed below, so the surviving order is still orderedPaths
+	-- order.
+	if (count of orderedPaths) ≥ 2 then
+		tell application "System Events" to launch application "System Events"
+		my pauseFor("delay_system_events_launch", 0.2)
+		repeat with pathIndex from 2 to (count of orderedPaths)
+			set nextAlias to my folderAliasFor(item pathIndex of orderedPaths)
+			if nextAlias is not missing value then
+				if not (my openAsTab(nextAlias)) then return
+			end if
+		end repeat
+	end if
+
+	-- Every wanted tab now exists; close the originals except the survivor, and
+	-- only when their target is part of the rebuild (or the folder the dual
+	-- pane opens separately). A window whose target cannot be recreated --
+	-- a transient search, or one that dropped out of orderedPaths while Finder
+	-- was busy -- stays open, so the result is then not strictly one window.
+	-- The id comparison coerces to text: `repeat with x in (id of every …)`
+	-- binds references, not integers, and `reference is integer` is false even
+	-- when the ids match (measured) -- which closed the survivor itself.
+	tell application "Finder"
+		repeat with anID in originalIDs
+			if (anID as text) is not (survivorID as text) then
+				try
+					set aPath to POSIX path of ((target of Finder window id anID) as alias)
+					if (aPath is in orderedPaths) or (aPath is excludedPath) then close Finder window id anID
+				end try
+			end if
+		end repeat
+	end tell
+
+	-- Leave the folder that was frontmost showing, rather than the last tab made.
+	try
+		tell application "Finder" to set index of Finder window id survivorID to 1
+	end try
+end rebuildAsTabs
+
+-- How many real Finder browser windows there are, tabs not counted. System
+-- Events also sees Get Info panels and copy-progress windows as windows of
+-- the Finder process, so they have to be told apart from browser windows.
+--
+-- The test is the presence of a split group -- the sidebar/content divider.
+-- Measured on macOS 26: a browser window keeps its AXSplitGroup child with the
+-- toolbar hidden, with `sidebar width` set to 0, and with the sidebar hidden
+-- outright via Cmd-Opt-S; a Get Info window has an AXScrollArea and no split
+-- group. Two things that look like they would work but do not: subrole is
+-- "AXStandardWindow" for both, and `exists toolbar 1` reports false for a
+-- browser window whose toolbar the user has hidden -- which would count such a
+-- user's windows as zero and silently stop merging from ever happening.
+--
+-- Returns -1 when System Events cannot answer (no Accessibility permission),
+-- which callers treat as "unverifiable: do not rebuild".
+on realWindowCount()
+	try
+		tell application "System Events" to tell process "Finder"
+			set browserCount to 0
+			repeat with w in (get every window)
+				if (exists splitter group 1 of w) or (exists toolbar 1 of w) then
+					set browserCount to browserCount + 1
+				end if
+			end repeat
+			return browserCount
+		end tell
+	end try
+	return -1
+end realWindowCount
+
+-- Cmd-T, wait for the tab to really appear, then retarget it. Returns true
+-- only on success. There is no fallback window: a caller that gets false
+-- aborts the rebuild and closes nothing, and opening a separate window would
+-- leave Finder in a state the user did not ask for.
+on openAsTab(folderAlias)
+	tell application "Finder" to set beforeCount to count of Finder windows
+	try
+		tell application "System Events"
+			tell process "Finder" to set frontmost to true
+			keystroke "t" using command down
+		end tell
+	end try
+	-- Poll for the tab instead of trusting a fixed delay. A fixed delay was both
+	-- slower and wrong: with several folders to add, Cmd-T for the later ones
+	-- landed while Finder was still busy and the tab never appeared. Retargeting
+	-- a tab that does not exist would overwrite a folder the user still wants, so
+	-- the retarget only happens once the new tab is really there.
+	repeat 20 times
+		delay 0.05
+		tell application "Finder" to set nowCount to count of Finder windows
+		if nowCount &gt; beforeCount then
+			try
+				tell application "Finder" to set target of front Finder window to folderAlias
+				return true
+			end try
+			return false
+		end if
+	end repeat
+	return false
+end openAsTab</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>EAC50034-127C-4901-BEB1-94AD94930716</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>paths</key>
+				<array>
+					<string>/System/Library/CoreServices/Finder.app</string>
+				</array>
+				<key>toggle</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.launchfiles</string>
+			<key>uid</key>
+			<string>663E076A-FF78-4603-B4E2-40E1374DDC0D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>unstackview</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.hidealfred</string>
+			<key>uid</key>
+			<string>99483FC5-AB90-440E-9150-F66FBE2589E7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>fixedorder</key>
+				<true/>
+				<key>items</key>
+				<string>[{"imagefile":"89551b6ef797ffbfd2d7b3d8ef694206722f4006.png","title":"Single Pane — Center","arg":"center","subtitle":"Finder pane placed at the center"},{"imagefile":"521d50ada7b94e4f1ff3ee1b8aa8e8da10818ed5.png","title":"Single Pane — Fill","arg":"fill","subtitle":"Finder pane fill the desktop"},{"imagefile":"a152f4e528dafe42c0111101bbed6a0d5afa4819.png","title":"Single Pane — Top","arg":"top","subtitle":"Finder pane placed on the top"},{"imagefile":"a60f3413e601cda4890c88179ba489013c04ef7d.png","title":"Single Pane — Bottom","arg":"bottom","subtitle":"Finder pnae placed on the bottom"},{"imagefile":"fc8fc723dbb59799ee0fae64a964ec1b1eeab3cd.png","title":"Single Pane — Left","arg":"left","subtitle":"Finder pane placed on the left"},{"imagefile":"a25d12b36d0988bee1236b574fdc6c3b74e052f9.png","title":"Single Pane — Right","arg":"right","subtitle":"Finder pane placed on the right"}]</string>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Select view mode</string>
+				<key>title</key>
+				<string>Finder Unclutter</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.listfilter</string>
+			<key>uid</key>
+			<string>C62D3264-F63F-4E1A-91E9-C6AA59923B7F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>3</integer>
+				<key>argumenttext</key>
+				<string>dual_pane</string>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>06333535-E592-4267-BB61-C200A5732B3E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>single_pane_window_position</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>74707476-EE51-42B7-A02E-68100C055827</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>command</key>
+					<string>{query}</string>
+					<key>select_area</key>
+					<string>true</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>F1E951E9-9AE4-4860-B38E-0E98EDB68930</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:mode}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>single pane</string>
+						<key>outputlabel</key>
+						<string>single pane</string>
+						<key>uid</key>
+						<string>7CECB9AD-1D67-4C98-BD5B-6DA3BB14FAFD</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>dual pane</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>40A64B13-6F9E-4273-B184-57B6EE7DA66A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>use scripting additions
+
+on run argv
+	my hideOtherApplications()
+end run
+
+-- Alfred exposes workflow variables as environment variables. `system attribute`
+-- yields "" for anything unset, and "" as number raises, so every read goes
+-- through these helpers with an explicit fallback.
+
+on envText(keyName, fallbackValue)
+	try
+		set rawValue to system attribute keyName
+		if rawValue is missing value then return fallbackValue
+		if rawValue is "" then return fallbackValue
+		return rawValue
+	on error
+		return fallbackValue
+	end try
+end envText
+
+on envNumber(keyName, fallbackValue)
+	try
+		return (my envText(keyName, "")) as number
+	on error
+		return fallbackValue
+	end try
+end envNumber
+
+on envFlag(keyName)
+	set rawValue to my envText(keyName, "0")
+	return rawValue is "1" or rawValue is "true"
+end envFlag
+
+on pauseFor(keyName, fallbackValue)
+	set waitSeconds to my envNumber(keyName, fallbackValue)
+	if waitSeconds &gt; 0 then delay waitSeconds
+end pauseFor
+-- Hide every application other than Finder, when the workflow is configured to.
+--
+-- There is no scriptable "hide others" command, and the menu item title is
+-- localised and not carried in AppKit's MenuCommands table, so this goes through
+-- the keyboard shortcut. (The previous version wrapped an entirely commented-out
+-- `click menu item` in a `try` and put the keystroke in the `on error` branch --
+-- the empty `try` never raised, so the keystroke never ran and the setting did
+-- nothing at all.)
+
+on hideOtherApplications()
+	if not my envFlag("hide_others") then return
+	tell application "System Events" to launch application "System Events"
+	my pauseFor("delay_system_events_launch", 0.2)
+	tell application "System Events"
+		tell process "Finder" to set frontmost to true
+		keystroke "h" using {option down, command down}
+	end tell
+	my pauseFor("delay_window_operation", 0.2)
+end hideOtherApplications</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>E9686983-CFFB-42C7-AC8B-1618E5DB0122</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:select_area}</string>
+						<key>matchcasesensitive</key>
+						<true/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>true</string>
+						<key>outputlabel</key>
+						<string>Select area</string>
+						<key>uid</key>
+						<string>7CECB9AD-1D67-4C98-BD5B-6DA3BB14FAFD</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>else</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>4A4DF7A4-082B-490D-89A1-F5508725E88B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>mode</key>
+					<string>single pane</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>1775772B-6D64-40C2-AACF-BEDEBD81E3D2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:mode}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>single pane</string>
+						<key>outputlabel</key>
+						<string>single pane</string>
+						<key>uid</key>
+						<string>7CECB9AD-1D67-4C98-BD5B-6DA3BB14FAFD</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>dual pane</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>603A4983-1A70-4DA6-A7B2-820FF4FD5039</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:command}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>toggle</string>
+						<key>outputlabel</key>
+						<string>toggle</string>
+						<key>uid</key>
+						<string>24B7A4A6-AEE4-4B76-BC4E-7A19EED17BB3</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:command}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>single_pane</string>
+						<key>outputlabel</key>
+						<string>single pane</string>
+						<key>uid</key>
+						<string>229C42E7-5980-4A3A-9EA0-9B66109D88E6</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:command}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>dual_pane</string>
+						<key>outputlabel</key>
+						<string>dual pane</string>
+						<key>uid</key>
+						<string>1E71793E-30D9-407A-A023-3708375C60CA</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:command}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>close_other</string>
+						<key>outputlabel</key>
+						<string>close other</string>
+						<key>uid</key>
+						<string>87FCB770-BA99-4DCB-8658-DBDE0A06AD54</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:command}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>close_all</string>
+						<key>outputlabel</key>
+						<string>close all</string>
+						<key>uid</key>
+						<string>CC8CFFC0-D2A2-479F-ACE7-E61066634A33</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:command}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>config</string>
+						<key>outputlabel</key>
+						<string>config</string>
+						<key>uid</key>
+						<string>F41A627E-6642-4297-A779-95E933E87188</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>else</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>FDF82BE7-DE6C-4C5E-A6B9-912747422320</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alignment</key>
+				<integer>2</integer>
+				<key>backgroundcolor</key>
+				<string>#5E5E5EBF</string>
+				<key>fadespeed</key>
+				<integer>0</integer>
+				<key>fillmode</key>
+				<integer>0</integer>
+				<key>font</key>
+				<string>Tahoma</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>largetypetext</key>
+				<string>🧹unclutter → {var:mode} → {var:single_pane_window_position}</string>
+				<key>textcolor</key>
+				<string></string>
+				<key>wrapat</key>
+				<integer>50</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.largetype</string>
+			<key>uid</key>
+			<string>D4731FD4-CAC0-48A1-99F7-07F235D13ACE</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>fixedorder</key>
+				<true/>
+				<key>items</key>
+				<string>[{"imagefile":"4755c138f344e08ba251fa60e7e22a8e576159c8.png","title":"Unclutter → Dual-Pane","arg":"dual_pane","subtitle":""},{"imagefile":"977f7f342e58c93367049f0eb06ea833b4aa0d27.png","title":"Unclutter → Single-Pane","arg":"single_pane","subtitle":""},{"imagefile":"4b76542d97b5b04e90c9c65293aee086acb25094.png","title":"Toggle Show\/Hide Finder Windows","arg":"toggle"},{"imagefile":"9d086866a845c6eb573b1f2e2336f960d6c4ec1c.png","title":"Close Other Tabs and Windows","arg":"close_other","subtitle":""},{"imagefile":"8d10aec843cc53516929130416cd76595ea2d816.png","title":"Close All Finder Windows","arg":"close_all"},{"imagefile":"3ece0dde6c92ef59407bf4c7ce946fe1b81cb6d3.png","title":"Show Desktop","arg":"show_desktop"},{"title":"Open Config","arg":"config"}]</string>
+				<key>keyword</key>
+				<string>uc</string>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Select function</string>
+				<key>title</key>
+				<string>Finder Unclutter</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.listfilter</string>
+			<key>uid</key>
+			<string>D786CBC8-E75A-42DA-845D-A74401D86DD6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:wait_message}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>5</integer>
+						<key>matchstring</key>
+						<string></string>
+						<key>outputlabel</key>
+						<string>Show "please wait"</string>
+						<key>uid</key>
+						<string>33F43024-D5B4-4EDB-8901-298BE16F6854</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>else</string>
+				<key>hideelse</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>9C68A7A5-D136-42B3-AB7C-398A8139641D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>32</integer>
+				<key>hotmod</key>
+				<integer>1835008</integer>
+				<key>hotstring</key>
+				<string>U</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>602ABC6D-3B73-4C2F-A166-170852176784</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>single_pane</string>
+						<key>outputlabel</key>
+						<string>single pane</string>
+						<key>uid</key>
+						<string>87EF6069-6D46-41BE-9780-8073310FCB71</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>dual_pane</string>
+						<key>outputlabel</key>
+						<string>dual pane</string>
+						<key>uid</key>
+						<string>3604DC31-FBEC-4349-B213-BCC984B87A33</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>show_desktop</string>
+						<key>outputlabel</key>
+						<string>show desktop</string>
+						<key>uid</key>
+						<string>00FE549C-7CFB-483A-937F-EEAD39CE8BDE</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>else</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>987D0535-F7A9-49B2-A8AE-BB9A3CE7151F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>fixedorder</key>
+				<true/>
+				<key>items</key>
+				<string>[{"imagefile":"9bd681332fcd7213c0ada05005e5849a088ac9ed.png","title":"Dual Pane — Center (Horizontal)","arg":"center horizontal","subtitle":"Finder pane placed at the center"},{"imagefile":"182294e754ca06a278a11166bfc4fe8cc2329523.png","title":"Dual Pane — Center (Vertical)","arg":"center vertical","subtitle":"Finder pane fill the desktop"},{"imagefile":"6c57085cd230c8da978bb88cd4154a4ac10d3ef5.png","title":"Dual Pane — Fill (Horizontal)","arg":"fill horizontal","subtitle":"Finder pane fill the desktop"},{"imagefile":"ecd3bdb613536d93cefc43523e840b25ed16d0e1.png","title":"Dual Pane — Fill (Vertical)","arg":"fill vertical","subtitle":"Finder pane fill the desktop"},{"imagefile":"29b26198fff44c722b31f368b86186cb11e3a696.png","title":"Dual Pane — Left","arg":"left vertical","subtitle":"Finder pane placed to the left"},{"imagefile":"2bb99993eb42f0332e3b8166d024e325fd2a6511.png","title":"Dual Pane — Right","arg":"right vertical","subtitle":"Finder pane placed to the right"},{"imagefile":"cc0049713320af54c5c8f25b648f990ccaf1b9f7.png","title":"Dual Pane — Top","arg":"top horizontal","subtitle":"Finder pane placed on the top"},{"imagefile":"8505d0429234a493873d892ecd986698ff84546a.png","title":"Dual Pane — Bottom","arg":"bottom horizontal","subtitle":"Finder pane placed on the bottom"}]</string>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Select view mode</string>
+				<key>title</key>
+				<string>Finder Unclutter</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.listfilter</string>
+			<key>uid</key>
+			<string>E0B66618-E07B-49DD-BA7E-3DB533FA6982</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>mode</key>
+					<string>dual pane</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>C1792E7D-79AF-4A2D-9902-8B3842E436C9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>use scripting additions
+
+on run argv
+	tell application "System Events" to launch application "System Events"
+	my pauseFor("delay_system_events_launch", 0.2)
+	tell application "System Events" to key code (my envNumber("show_desktop_keycode", 103))
+	my pauseFor("delay_window_operation", 0.2)
+end run
+
+-- Alfred exposes workflow variables as environment variables. `system attribute`
+-- yields "" for anything unset, and "" as number raises, so every read goes
+-- through these helpers with an explicit fallback.
+
+on envText(keyName, fallbackValue)
+	try
+		set rawValue to system attribute keyName
+		if rawValue is missing value then return fallbackValue
+		if rawValue is "" then return fallbackValue
+		return rawValue
+	on error
+		return fallbackValue
+	end try
+end envText
+
+on envNumber(keyName, fallbackValue)
+	try
+		return (my envText(keyName, "")) as number
+	on error
+		return fallbackValue
+	end try
+end envNumber
+
+on envFlag(keyName)
+	set rawValue to my envText(keyName, "0")
+	return rawValue is "1" or rawValue is "true"
+end envFlag
+
+on pauseFor(keyName, fallbackValue)
+	set waitSeconds to my envNumber(keyName, fallbackValue)
+	if waitSeconds &gt; 0 then delay waitSeconds
+end pauseFor</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>AD791D09-B3A5-48E1-BEFF-0435E9EEAB3A</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>dual_pane_window_position</key>
+					<string>{var:split1}</string>
+					<key>orientation</key>
+					<string>{var:split2}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>66740EBF-8D95-40D7-8738-D72EDAA5D569</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>delimiter</key>
+				<string> </string>
+				<key>discardemptyarguments</key>
+				<false/>
+				<key>outputas</key>
+				<integer>0</integer>
+				<key>trimarguments</key>
+				<true/>
+				<key>variableprefix</key>
+				<string>split</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>FBA27933-4D1E-4114-B687-11563BA6E7C1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<true/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>tell application id "com.runningwithcrayons.Alfred" to reveal workflow "com.yohasebe.finder.unclutter" configuration true</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F581DD95-1580-4E0B-92D6-CEACE22EB113</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alignment</key>
+				<integer>2</integer>
+				<key>backgroundcolor</key>
+				<string>#5E5E5EBF</string>
+				<key>fadespeed</key>
+				<integer>0</integer>
+				<key>fillmode</key>
+				<integer>0</integer>
+				<key>font</key>
+				<string>Tahoma</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>largetypetext</key>
+				<string>🧹unclutter → {var:mode} → {var:dual_pane_window_position} ({var:orientation})</string>
+				<key>textcolor</key>
+				<string></string>
+				<key>wrapat</key>
+				<integer>50</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.largetype</string>
+			<key>uid</key>
+			<string>2434B5D1-F72E-414C-A54E-C6AABCF098BB</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:wait_message}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>5</integer>
+						<key>matchstring</key>
+						<string></string>
+						<key>outputlabel</key>
+						<string>Show "please wait"</string>
+						<key>uid</key>
+						<string>33F43024-D5B4-4EDB-8901-298BE16F6854</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>else</string>
+				<key>hideelse</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>4DB44DA2-58F0-46E2-920E-71B0BCDAD222</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>-- Split one region of the screen between two Finder windows.
+--
+-- This replaces the two near-identical horizontal and vertical scripts: the
+-- layout is "pick a region, then cut it in half along one axis", and only the
+-- axis differs. `orientation` is "horizontal" for a side-by-side split and
+-- "vertical" for a stacked one.
+
+use framework "AppKit"
+use scripting additions
+
+on run argv
+	set orientationName to my envText("orientation", "horizontal")
+	set positionName to my envText("dual_pane_window_position", "fill")
+	set sidebarMode to my envText("sidebars", "single")
+	set sidebarPixels to my envNumber("sidebar_width", 200)
+	set sidesReversed to my envFlag("reverse")
+	set primaryView to my envText("view_type_primary", "list")
+	set secondaryView to my envText("view_type_secondary", "list")
+
+	set {regionLeft, regionTop, regionWidth, regionHeight} to my regionForPosition(positionName, my activeUsableRect())
+
+	-- Finder will not shrink a window below its sidebar plus ~324pt of content
+	-- (measured: a window asked for 100pt came back 316pt; with a 192pt
+	-- sidebar, 516pt). sidebar_width can be configured up to 500 while a
+	-- region can be far narrower, so cap the sidebar to what the panes can
+	-- actually hold -- otherwise Finder clamps the bounds itself and the
+	-- panes overlap. The horizontal single case is the tightest: the leading
+	-- pane is regionWidth/2 + sidebar/2 and must fit sidebar + 324.
+	set maxSidebar to regionWidth - 324
+	if orientationName is not "vertical" then
+		if sidebarMode is "double" then
+			set maxSidebar to (regionWidth / 2) - 324
+		else if sidebarMode is "single" then
+			set maxSidebar to regionWidth - 648
+		end if
+	end if
+	if sidebarPixels &gt; maxSidebar then set sidebarPixels to maxSidebar
+	if sidebarPixels &lt; 0 then set sidebarPixels to 0
+
+	-- With a sidebar on one pane only, the two file lists come out the same width
+	-- only if the divider moves by half the sidebar's width.
+	set dividerShift to 0
+	if sidebarMode is "single" and orientationName is not "vertical" then
+		set dividerShift to sidebarPixels / 2
+		-- Belt and braces past the sidebar cap above: keep the trailing
+		-- (sidebar-less) pane at or above the 316pt floor.
+		set maxShift to (regionWidth / 2) - 316
+		if dividerShift &gt; maxShift then set dividerShift to maxShift
+		if dividerShift &lt; 0 then set dividerShift to 0
+	end if
+
+	if orientationName is "vertical" then
+		set leadingRect to {regionLeft, regionTop, regionWidth, regionHeight / 2}
+		set trailingRect to {regionLeft, regionTop + regionHeight / 2, regionWidth, regionHeight / 2}
+	else
+		set leadingRect to {regionLeft, regionTop, regionWidth / 2 + dividerShift, regionHeight}
+		set trailingRect to {regionLeft + regionWidth / 2 + dividerShift, regionTop, regionWidth / 2 - dividerShift, regionHeight}
+	end if
+
+	if sidebarMode is "double" then
+		set {leadingSidebar, trailingSidebar} to {sidebarPixels, sidebarPixels}
+	else if sidebarMode is "none" then
+		set {leadingSidebar, trailingSidebar} to {0, 0}
+	else
+		set {leadingSidebar, trailingSidebar} to {sidebarPixels, 0}
+	end if
+
+	tell application "Finder"
+		if (count of Finder windows) is 0 then
+			set homeAlias to my homeFolderAlias()
+			if homeAlias is missing value then
+				my reportBadHomeFolder()
+				return
+			end if
+			make new Finder window to homeAlias
+			my pauseFor("wait_in_seconds", 0.1)
+		end if
+		set primaryWindow to front Finder window
+		try
+			set secondaryWindow to make new Finder window to (my secondaryTargetFor(primaryWindow))
+		on error
+			-- The secondary target could not be opened (e.g. the primary window
+			-- shows a transient search in "same" mode); fall back to the home
+			-- folder rather than erroring out mid-layout.
+			set secondaryWindow to make new Finder window to (my homeFolderAlias())
+		end try
+		my pauseFor("wait_in_seconds", 0.1)
+	end tell
+
+	-- "Reverse" swaps which side the primary folder lands on; the sidebar stays
+	-- with the leading pane either way.
+	if sidesReversed then
+		set {primaryRect, secondaryRect} to {trailingRect, leadingRect}
+		set {primarySidebar, secondarySidebar} to {trailingSidebar, leadingSidebar}
+	else
+		set {primaryRect, secondaryRect} to {leadingRect, trailingRect}
+		set {primarySidebar, secondarySidebar} to {leadingSidebar, trailingSidebar}
+	end if
+
+	-- Chrome before geometry. Finder refuses to make a window narrower than its
+	-- sidebar plus a minimum content area, so a pane that still carries a wide
+	-- sidebar from a previous run silently comes out too wide if the bounds are
+	-- set first. Setting the sidebar (0 included) up front removes that floor.
+	my applyChrome(secondaryWindow, secondaryView, secondarySidebar)
+	my pauseFor("wait_in_seconds", 0.1)
+	my applyChrome(primaryWindow, primaryView, primarySidebar)
+	my pauseFor("wait_in_seconds", 0.1)
+
+	tell application "Finder"
+		set bounds of secondaryWindow to my boundsOfRect(secondaryRect)
+		set bounds of primaryWindow to my boundsOfRect(primaryRect)
+		activate
+	end tell
+end run
+
+-- Alfred exposes workflow variables as environment variables. `system attribute`
+-- yields "" for anything unset, and "" as number raises, so every read goes
+-- through these helpers with an explicit fallback.
+
+on envText(keyName, fallbackValue)
+	try
+		set rawValue to system attribute keyName
+		if rawValue is missing value then return fallbackValue
+		if rawValue is "" then return fallbackValue
+		return rawValue
+	on error
+		return fallbackValue
+	end try
+end envText
+
+on envNumber(keyName, fallbackValue)
+	try
+		return (my envText(keyName, "")) as number
+	on error
+		return fallbackValue
+	end try
+end envNumber
+
+on envFlag(keyName)
+	set rawValue to my envText(keyName, "0")
+	return rawValue is "1" or rawValue is "true"
+end envFlag
+
+on pauseFor(keyName, fallbackValue)
+	set waitSeconds to my envNumber(keyName, fallbackValue)
+	if waitSeconds &gt; 0 then delay waitSeconds
+end pauseFor
+-- Screen geometry, in Finder's coordinate space.
+--
+-- NSScreen reports rects with the origin at the bottom-left of the primary
+-- display and y growing upward. Finder's `bounds` and System Events' `position`
+-- both put the origin at the top-left of the primary display with y growing
+-- downward. Everything here returns the Finder convention as
+-- {left, top, width, height}.
+--
+-- Reading NSScreen also replaces the old `system_profiler SPDisplaysDataType`
+-- call, which cost several seconds on the first run after a reboot, and gives us
+-- visibleFrame -- the area left over once the menu bar and a pinned Dock are
+-- taken out -- so no menu bar height has to be guessed at.
+
+on screenRects()
+	set nsScreens to current application's NSScreen's screens()
+	if (count of nsScreens) is 0 then return {}
+	set primaryHeight to item 2 of item 2 of ((item 1 of nsScreens)'s frame())
+	set rectList to {}
+	repeat with aScreen in nsScreens
+		set fullRect to my toFinderRect(aScreen's frame(), primaryHeight)
+		set usableRect to my toFinderRect(aScreen's visibleFrame(), primaryHeight)
+		set end of rectList to {fullArea:fullRect, usableArea:usableRect}
+	end repeat
+	return rectList
+end screenRects
+
+on toFinderRect(nsRect, primaryHeight)
+	set originX to item 1 of item 1 of nsRect
+	set originY to item 2 of item 1 of nsRect
+	set rectWidth to item 1 of item 2 of nsRect
+	set rectHeight to item 2 of item 2 of nsRect
+	return {originX, primaryHeight - (originY + rectHeight), rectWidth, rectHeight}
+end toFinderRect
+
+on usableRectContaining(pointX, pointY)
+	set rectList to my screenRects()
+	if rectList is {} then return {0, 0, 1440, 900}
+	repeat with anEntry in rectList
+		set {rectLeft, rectTop, rectWidth, rectHeight} to fullArea of anEntry
+		if pointX ≥ rectLeft and pointX &lt; rectLeft + rectWidth then
+			if pointY ≥ rectTop and pointY &lt; rectTop + rectHeight then
+				return usableArea of anEntry
+			end if
+		end if
+	end repeat
+	return usableArea of (item 1 of rectList)
+end usableRectContaining
+
+-- The screen the user is working on: the one holding the front Finder window,
+-- or the one under the pointer when no window is open. The old code always used
+-- whichever display system_profiler happened to list first, which dragged
+-- windows back to the primary display.
+on activeUsableRect()
+	try
+		tell application "Finder"
+			if (count of Finder windows) &gt; 0 then
+				set frontBounds to bounds of front Finder window
+				set centreX to ((item 1 of frontBounds) + (item 3 of frontBounds)) / 2
+				set centreY to ((item 2 of frontBounds) + (item 4 of frontBounds)) / 2
+				return my usableRectContaining(centreX, centreY)
+			end if
+		end tell
+	end try
+	try
+		set nsScreens to current application's NSScreen's screens()
+		set primaryHeight to item 2 of item 2 of ((item 1 of nsScreens)'s frame())
+		set mouseAt to current application's NSEvent's mouseLocation()
+		return my usableRectContaining(item 1 of mouseAt, primaryHeight - (item 2 of mouseAt))
+	end try
+	return my usableRectContaining(0, 0)
+end activeUsableRect
+
+-- Carve out the part of a screen a layout keyword refers to. Both the single and
+-- the dual pane layouts start here; the dual pane then splits the result in two.
+on regionForPosition(positionName, usableRect)
+	set {rectLeft, rectTop, rectWidth, rectHeight} to usableRect
+	if positionName is "left" then
+		return {rectLeft, rectTop, rectWidth / 2, rectHeight}
+	else if positionName is "right" then
+		return {rectLeft + rectWidth / 2, rectTop, rectWidth / 2, rectHeight}
+	else if positionName is "top" then
+		return {rectLeft, rectTop, rectWidth, rectHeight / 2}
+	else if positionName is "bottom" then
+		return {rectLeft, rectTop + rectHeight / 2, rectWidth, rectHeight / 2}
+	else if positionName is "center" then
+		return {rectLeft + rectWidth / 6, rectTop + rectHeight / 6, rectWidth * 2 / 3, rectHeight * 2 / 3}
+	end if
+	return {rectLeft, rectTop, rectWidth, rectHeight} -- "fill", and anything unrecognised
+end regionForPosition
+
+on boundsOfRect(aRect)
+	set {rectLeft, rectTop, rectWidth, rectHeight} to aRect
+	return {round rectLeft, round rectTop, round (rectLeft + rectWidth), round (rectTop + rectHeight)}
+end boundsOfRect
+-- Folder resolution and per-window chrome shared by the pane layouts.
+
+-- The configured home folder is a UNIX path typed by the user, so it may start
+-- with "~" and may contain spaces. Resolving it to an alias here means no part of
+-- the workflow has to hand-escape it for a shell.
+on expandTilde(pathText)
+	if pathText does not start with "~" then return pathText
+	set homeDirectory to POSIX path of (path to home folder)
+	if homeDirectory ends with "/" then set homeDirectory to text 1 thru -2 of homeDirectory
+	if pathText is "~" then return homeDirectory
+	if pathText starts with "~/" then return homeDirectory &amp; (text 2 thru -1 of pathText)
+	return pathText
+end expandTilde
+
+on folderAliasFor(pathText)
+	try
+		return (POSIX file (my expandTilde(pathText))) as alias
+	on error
+		return missing value
+	end try
+end folderAliasFor
+
+on homeFolderAlias()
+	return my folderAliasFor(my envText("home_folder", "~"))
+end homeFolderAlias
+
+on reportBadHomeFolder()
+	try
+		tell application id "com.runningwithcrayons.Alfred" to run trigger "stop" in workflow "com.yohasebe.finder.unclutter"
+	end try
+	tell application "Finder" to activate
+	display dialog "The folder set as \"Home Folder\" in the workflow configuration does not exist. Please check the configuration." buttons {"OK"} default button "OK" with title "Finder Unclutter" with icon caution
+end reportBadHomeFolder
+
+-- What the secondary pane should show, given the window that holds the primary
+-- pane's folder.
+on secondaryTargetFor(primaryWindow)
+	set secondaryMode to my envText("folder_secondary", "same")
+	if secondaryMode is "home" then
+		set homeAlias to my homeFolderAlias()
+		if homeAlias is not missing value then return homeAlias
+	else if secondaryMode is "desktop" then
+		try
+			return (path to desktop folder) as alias
+		end try
+	else if secondaryMode is "parent" then
+		try
+			tell application "Finder" to return (container of (target of primaryWindow)) as alias
+		end try
+		try
+			return (POSIX file "/") as alias
+		end try
+	end if
+	-- Anything else -- "same", or "left", the value older prefs.plist files
+	-- carry for "same as primary" -- mirrors the primary pane.
+	tell application "Finder" to return target of primaryWindow
+end secondaryTargetFor
+
+on viewConstantFor(viewName)
+	tell application "Finder"
+		if viewName is "icon" then return icon view
+		if viewName is "column" then return column view
+		if viewName is "gallery" then return flow view
+		return list view
+	end tell
+end viewConstantFor
+
+-- Sidebar width only takes effect on the frontmost window, hence the `set index`
+-- before it.
+on applyChrome(theWindow, viewName, sidebarPixels)
+	tell application "Finder"
+		set toolbar visible of theWindow to true
+		set pathbar visible of theWindow to true
+		set statusbar visible of theWindow to true
+		try
+			set current view of theWindow to my viewConstantFor(viewName)
+		end try
+		set index of theWindow to 1
+		try
+			set sidebar width of theWindow to sidebarPixels
+		end try
+	end tell
+end applyChrome</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>E89C3AE5-8AEF-46F3-9DE4-AE73A04D7724</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>command</key>
+					<string>{query}</string>
+					<key>select_area</key>
+					<string>false</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>C99932BF-F500-4811-AB0C-B447B4EB960D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
+				<key>triggerid</key>
+				<string>stop</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>6E40A959-6DAC-4D8D-9FFA-207095598497</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>dual_pane_window_position</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>E594ADD6-8F06-46D3-A543-91326D9F536D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>unstackview</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.hidealfred</string>
+			<key>uid</key>
+			<string>DC3D71E7-DD9B-4BED-86DF-B6F4B9792B9D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>-- Merge step ahead of the dual pane layout. The folder destined for the
+-- secondary pane is dropped here so it does not also appear as a tab of the
+-- primary pane.
+
+use scripting additions
+
+on run argv
+	my mergeIntoTabs(true)
+end run
+
+-- Alfred exposes workflow variables as environment variables. `system attribute`
+-- yields "" for anything unset, and "" as number raises, so every read goes
+-- through these helpers with an explicit fallback.
+
+on envText(keyName, fallbackValue)
+	try
+		set rawValue to system attribute keyName
+		if rawValue is missing value then return fallbackValue
+		if rawValue is "" then return fallbackValue
+		return rawValue
+	on error
+		return fallbackValue
+	end try
+end envText
+
+on envNumber(keyName, fallbackValue)
+	try
+		return (my envText(keyName, "")) as number
+	on error
+		return fallbackValue
+	end try
+end envNumber
+
+on envFlag(keyName)
+	set rawValue to my envText(keyName, "0")
+	return rawValue is "1" or rawValue is "true"
+end envFlag
+
+on pauseFor(keyName, fallbackValue)
+	set waitSeconds to my envNumber(keyName, fallbackValue)
+	if waitSeconds &gt; 0 then delay waitSeconds
+end pauseFor
+-- Folder resolution and per-window chrome shared by the pane layouts.
+
+-- The configured home folder is a UNIX path typed by the user, so it may start
+-- with "~" and may contain spaces. Resolving it to an alias here means no part of
+-- the workflow has to hand-escape it for a shell.
+on expandTilde(pathText)
+	if pathText does not start with "~" then return pathText
+	set homeDirectory to POSIX path of (path to home folder)
+	if homeDirectory ends with "/" then set homeDirectory to text 1 thru -2 of homeDirectory
+	if pathText is "~" then return homeDirectory
+	if pathText starts with "~/" then return homeDirectory &amp; (text 2 thru -1 of pathText)
+	return pathText
+end expandTilde
+
+on folderAliasFor(pathText)
+	try
+		return (POSIX file (my expandTilde(pathText))) as alias
+	on error
+		return missing value
+	end try
+end folderAliasFor
+
+on homeFolderAlias()
+	return my folderAliasFor(my envText("home_folder", "~"))
+end homeFolderAlias
+
+on reportBadHomeFolder()
+	try
+		tell application id "com.runningwithcrayons.Alfred" to run trigger "stop" in workflow "com.yohasebe.finder.unclutter"
+	end try
+	tell application "Finder" to activate
+	display dialog "The folder set as \"Home Folder\" in the workflow configuration does not exist. Please check the configuration." buttons {"OK"} default button "OK" with title "Finder Unclutter" with icon caution
+end reportBadHomeFolder
+
+-- What the secondary pane should show, given the window that holds the primary
+-- pane's folder.
+on secondaryTargetFor(primaryWindow)
+	set secondaryMode to my envText("folder_secondary", "same")
+	if secondaryMode is "home" then
+		set homeAlias to my homeFolderAlias()
+		if homeAlias is not missing value then return homeAlias
+	else if secondaryMode is "desktop" then
+		try
+			return (path to desktop folder) as alias
+		end try
+	else if secondaryMode is "parent" then
+		try
+			tell application "Finder" to return (container of (target of primaryWindow)) as alias
+		end try
+		try
+			return (POSIX file "/") as alias
+		end try
+	end if
+	-- Anything else -- "same", or "left", the value older prefs.plist files
+	-- carry for "same as primary" -- mirrors the primary pane.
+	tell application "Finder" to return target of primaryWindow
+end secondaryTargetFor
+
+on viewConstantFor(viewName)
+	tell application "Finder"
+		if viewName is "icon" then return icon view
+		if viewName is "column" then return column view
+		if viewName is "gallery" then return flow view
+		return list view
+	end tell
+end viewConstantFor
+
+-- Sidebar width only takes effect on the frontmost window, hence the `set index`
+-- before it.
+on applyChrome(theWindow, viewName, sidebarPixels)
+	tell application "Finder"
+		set toolbar visible of theWindow to true
+		set pathbar visible of theWindow to true
+		set statusbar visible of theWindow to true
+		try
+			set current view of theWindow to my viewConstantFor(viewName)
+		end try
+		set index of theWindow to 1
+		try
+			set sidebar width of theWindow to sidebarPixels
+		end try
+	end tell
+end applyChrome
+-- Collapse every open Finder window and tab into one window carrying one tab per
+-- distinct folder.
+--
+-- Finder surfaces each tab as its own `Finder window` in AppleScript and offers
+-- no way to ask which window a tab belongs to; background tabs even keep
+-- reporting the bounds they had before their window was moved. System Events, by
+-- contrast, sees only real windows, so the count it reports is what tells us
+-- whether everything already lives in one window.
+--
+-- Tabs are built with Cmd-T plus `set target`, not with the Window menu's
+-- "Merge All Windows". That item is unreliable: on macOS 26 Finder reports it as
+-- disabled and ignores both `click` and AXPress even with several plain windows
+-- open, and its title is localised, which is why the workflow used to demand
+-- that Finder run in English. Cmd-T is a fixed shortcut in every language and
+-- works regardless of the "Prefer tabs when opening documents" setting.
+
+on mergeIntoTabs(dropSecondaryFolder)
+	set fallbackPath to my envText("home_folder", "~")
+	set frontPath to fallbackPath
+	set orderedPaths to {}
+	set duplicateSeen to false
+	set excludedSeen to false
+
+	tell application "Finder"
+		set openWindows to every Finder window
+		if (count of openWindows) is 0 then
+			activate
+			return
+		end if
+
+		set frontWindow to item 1 of openWindows
+		try
+			set frontPath to POSIX path of ((target of frontWindow) as alias)
+		end try
+
+		-- The dual pane opens the secondary folder in a window of its own, so
+		-- keeping it as a tab of the primary window too is just clutter. Never
+		-- exclude the primary folder itself, though: with folder_secondary =
+		-- "same" the secondary IS the primary folder, and dropping it here
+		-- would retarget the front tab to a folder the user did not choose.
+		set excludedPath to ""
+		if dropSecondaryFolder then
+			try
+				set candidatePath to POSIX path of ((my secondaryTargetFor(frontWindow)) as alias)
+				if candidatePath is not frontPath then set excludedPath to candidatePath
+			end try
+		end if
+
+		-- A window whose target will not coerce to an alias (a transient search
+		-- result) contributes no path and is never closed by the rebuild:
+		-- `set target` cannot recreate it. Saved Smart Folders (.savedSearch)
+		-- DO coerce -- their path is the search file -- so they flow through
+		-- orderedPaths like any folder and survive being rebuilt.
+		repeat with aWindow in openWindows
+			set aPath to ""
+			try
+				set aPath to POSIX path of ((target of aWindow) as alias)
+			end try
+			if aPath is not "" then
+				if aPath is excludedPath then
+					set excludedSeen to true
+				else if aPath is in orderedPaths then
+					set duplicateSeen to true
+				else
+					set end of orderedPaths to aPath
+				end if
+			end if
+		end repeat
+
+		if orderedPaths is {} then set orderedPaths to {frontPath}
+		activate
+	end tell
+
+	-- One real browser window, no duplicate tabs and nothing to exclude:
+	-- everything already lives in one window, so leave the user's tab order and
+	-- scroll positions alone. `excludedSeen` matters because the dual pane is
+	-- about to open that folder in its own window; without it the folder would
+	-- stay as a tab of the primary pane as well, which is the clutter excluding
+	-- it was meant to avoid.
+	-- realWindowCount() is -1 when System Events cannot answer (no Accessibility
+	-- permission); unverifiable means do not rebuild.
+	set realCount to my realWindowCount()
+	set needsRebuild to (realCount &gt; 1) or duplicateSeen or excludedSeen
+
+	if needsRebuild then my rebuildAsTabs(orderedPaths, excludedPath)
+end mergeIntoTabs
+
+-- Build first, destroy last. The originals stay open until every wanted tab
+-- really exists; if tab creation fails at any point (e.g. Cmd-T cannot fire
+-- without Accessibility permission) the rebuild aborts and closes nothing, so
+-- Finder is left untidy but intact rather than exploded into one window per
+-- folder.
+on rebuildAsTabs(orderedPaths, excludedPath)
+	set survivorID to missing value
+	set originalIDs to {}
+	-- Finder answers "busy" (-15260) while it has heavy work in flight (a Smart
+	-- Folder's Spotlight query, iCloud churn), so retry briefly. If it never
+	-- answers, abort before anything is built or closed.
+	repeat 10 times
+		try
+			tell application "Finder"
+				activate
+				set survivorID to id of front Finder window
+				set originalIDs to id of every Finder window
+			end tell
+			exit repeat
+		on error
+			delay 0.2
+		end try
+	end repeat
+	if survivorID is missing value then return
+
+	-- Point the survivor at the first folder. The guard is strict on purpose:
+	-- retarget only when the survivor's current target resolves to a path that
+	-- is part of the rebuild. Anything else -- a transient search, or a folder
+	-- that dropped out of orderedPaths because Finder was too busy to answer --
+	-- is left alone, because retargeting would destroy it.
+	try
+		tell application "Finder"
+			set survivorPath to POSIX path of ((target of Finder window id survivorID) as alias)
+			if (survivorPath is in orderedPaths) and (survivorPath is not (item 1 of orderedPaths)) then
+				set firstAlias to my folderAliasFor(item 1 of orderedPaths)
+				if firstAlias is not missing value then set target of Finder window id survivorID to firstAlias
+			end if
+		end tell
+	end try
+
+	-- New tabs land after the survivor window's existing tabs, and the old
+	-- ones are closed below, so the surviving order is still orderedPaths
+	-- order.
+	if (count of orderedPaths) ≥ 2 then
+		tell application "System Events" to launch application "System Events"
+		my pauseFor("delay_system_events_launch", 0.2)
+		repeat with pathIndex from 2 to (count of orderedPaths)
+			set nextAlias to my folderAliasFor(item pathIndex of orderedPaths)
+			if nextAlias is not missing value then
+				if not (my openAsTab(nextAlias)) then return
+			end if
+		end repeat
+	end if
+
+	-- Every wanted tab now exists; close the originals except the survivor, and
+	-- only when their target is part of the rebuild (or the folder the dual
+	-- pane opens separately). A window whose target cannot be recreated --
+	-- a transient search, or one that dropped out of orderedPaths while Finder
+	-- was busy -- stays open, so the result is then not strictly one window.
+	-- The id comparison coerces to text: `repeat with x in (id of every …)`
+	-- binds references, not integers, and `reference is integer` is false even
+	-- when the ids match (measured) -- which closed the survivor itself.
+	tell application "Finder"
+		repeat with anID in originalIDs
+			if (anID as text) is not (survivorID as text) then
+				try
+					set aPath to POSIX path of ((target of Finder window id anID) as alias)
+					if (aPath is in orderedPaths) or (aPath is excludedPath) then close Finder window id anID
+				end try
+			end if
+		end repeat
+	end tell
+
+	-- Leave the folder that was frontmost showing, rather than the last tab made.
+	try
+		tell application "Finder" to set index of Finder window id survivorID to 1
+	end try
+end rebuildAsTabs
+
+-- How many real Finder browser windows there are, tabs not counted. System
+-- Events also sees Get Info panels and copy-progress windows as windows of
+-- the Finder process, so they have to be told apart from browser windows.
+--
+-- The test is the presence of a split group -- the sidebar/content divider.
+-- Measured on macOS 26: a browser window keeps its AXSplitGroup child with the
+-- toolbar hidden, with `sidebar width` set to 0, and with the sidebar hidden
+-- outright via Cmd-Opt-S; a Get Info window has an AXScrollArea and no split
+-- group. Two things that look like they would work but do not: subrole is
+-- "AXStandardWindow" for both, and `exists toolbar 1` reports false for a
+-- browser window whose toolbar the user has hidden -- which would count such a
+-- user's windows as zero and silently stop merging from ever happening.
+--
+-- Returns -1 when System Events cannot answer (no Accessibility permission),
+-- which callers treat as "unverifiable: do not rebuild".
+on realWindowCount()
+	try
+		tell application "System Events" to tell process "Finder"
+			set browserCount to 0
+			repeat with w in (get every window)
+				if (exists splitter group 1 of w) or (exists toolbar 1 of w) then
+					set browserCount to browserCount + 1
+				end if
+			end repeat
+			return browserCount
+		end tell
+	end try
+	return -1
+end realWindowCount
+
+-- Cmd-T, wait for the tab to really appear, then retarget it. Returns true
+-- only on success. There is no fallback window: a caller that gets false
+-- aborts the rebuild and closes nothing, and opening a separate window would
+-- leave Finder in a state the user did not ask for.
+on openAsTab(folderAlias)
+	tell application "Finder" to set beforeCount to count of Finder windows
+	try
+		tell application "System Events"
+			tell process "Finder" to set frontmost to true
+			keystroke "t" using command down
+		end tell
+	end try
+	-- Poll for the tab instead of trusting a fixed delay. A fixed delay was both
+	-- slower and wrong: with several folders to add, Cmd-T for the later ones
+	-- landed while Finder was still busy and the tab never appeared. Retargeting
+	-- a tab that does not exist would overwrite a folder the user still wants, so
+	-- the retarget only happens once the new tab is really there.
+	repeat 20 times
+		delay 0.05
+		tell application "Finder" to set nowCount to count of Finder windows
+		if nowCount &gt; beforeCount then
+			try
+				tell application "Finder" to set target of front Finder window to folderAlias
+				return true
+			end try
+			return false
+		end if
+	end repeat
+	return false
+end openAsTab</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>7ABA21D5-7E58-4E8C-88CA-23265D529C5E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedApps</key>
+				<array>
+					<string>com.apple.finder</string>
+				</array>
+				<key>relatedAppsMode</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>7D771252-D04E-4B29-80B9-DF08A11D8EA4</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>-- Keep the front window (Finder exposes each tab as a window, so this closes
+-- other tabs too) and close everything else. Iterating over a snapshot of
+-- id-based references avoids the old `repeat while window 2 exists` loop, which
+-- would spin forever on a window that refuses to close.
+
+tell application "Finder"
+	activate
+	if (count of Finder windows) is 0 then return
+	set survivorID to id of front Finder window
+	repeat with aWindow in (get every Finder window)
+		try
+			if id of aWindow is not survivorID then close aWindow
+		end try
+	end repeat
+end tell</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>91A3A96E-A6E1-4E92-9C20-68F21B90F250</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>unstackview</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.hidealfred</string>
+			<key>uid</key>
+			<string>DB194341-1ECD-4A31-AAF9-4A62A3BB31F1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>use scripting additions
+
+on run argv
+	my hideOtherApplications()
+end run
+
+-- Alfred exposes workflow variables as environment variables. `system attribute`
+-- yields "" for anything unset, and "" as number raises, so every read goes
+-- through these helpers with an explicit fallback.
+
+on envText(keyName, fallbackValue)
+	try
+		set rawValue to system attribute keyName
+		if rawValue is missing value then return fallbackValue
+		if rawValue is "" then return fallbackValue
+		return rawValue
+	on error
+		return fallbackValue
+	end try
+end envText
+
+on envNumber(keyName, fallbackValue)
+	try
+		return (my envText(keyName, "")) as number
+	on error
+		return fallbackValue
+	end try
+end envNumber
+
+on envFlag(keyName)
+	set rawValue to my envText(keyName, "0")
+	return rawValue is "1" or rawValue is "true"
+end envFlag
+
+on pauseFor(keyName, fallbackValue)
+	set waitSeconds to my envNumber(keyName, fallbackValue)
+	if waitSeconds &gt; 0 then delay waitSeconds
+end pauseFor
+-- Hide every application other than Finder, when the workflow is configured to.
+--
+-- There is no scriptable "hide others" command, and the menu item title is
+-- localised and not carried in AppKit's MenuCommands table, so this goes through
+-- the keyboard shortcut. (The previous version wrapped an entirely commented-out
+-- `click menu item` in a `try` and put the keystroke in the `on error` branch --
+-- the empty `try` never raised, so the keystroke never ran and the setting did
+-- nothing at all.)
+
+on hideOtherApplications()
+	if not my envFlag("hide_others") then return
+	tell application "System Events" to launch application "System Events"
+	my pauseFor("delay_system_events_launch", 0.2)
+	tell application "System Events"
+		tell process "Finder" to set frontmost to true
+		keystroke "h" using {option down, command down}
+	end tell
+	my pauseFor("delay_window_operation", 0.2)
+end hideOtherApplications</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>B9C1809B-CFC7-4B51-90AF-5ED974FE27AA</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>tell application "Finder"
+	close every Finder window
+	activate
+end tell</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>70ECF995-3141-4006-B0B4-E98F03D333F3</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>8F900970-BC72-4DC1-807E-537E8D112242</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>3</integer>
+				<key>argumenttext</key>
+				<string>left</string>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>79C49BE5-DA02-418E-854B-E82D54F5599D</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>3</integer>
+				<key>argumenttext</key>
+				<string>top</string>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>52F99AAF-EBFA-4B71-AFA8-24BB9B4C01BA</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>button1</key>
+				<string>Ok</string>
+				<key>button2</key>
+				<string>Cancel</string>
+				<key>button3</key>
+				<string></string>
+				<key>description</key>
+				<string></string>
+				<key>title</key>
+				<string>Close all Finder windows</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.dialog</string>
+			<key>uid</key>
+			<string>69967A07-C457-4CB4-8D09-E99FDB541AC1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>3</integer>
+				<key>argumenttext</key>
+				<string>right</string>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>5FB3350F-C392-4996-9806-1312E5482BCC</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>3</integer>
+				<key>argumenttext</key>
+				<string>bottom</string>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>75980A59-5206-4DB5-9F2E-88C00FCBEACF</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>mode</key>
+					<string>dual pane</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>0F68AAC7-EEA5-4D70-82CB-52D9589053CD</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>orientation</key>
+					<string>vertical</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>02D137EC-EC22-4DA1-93E5-84BFE6075E3E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>orientation</key>
+					<string>horizontal</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>694E5D71-3095-42DF-80D4-A5290B9C55BC</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>3</integer>
+				<key>argumenttext</key>
+				<string>center</string>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>80BD1FC0-A34A-4C84-B635-F6B4F9E53399</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>3</integer>
+				<key>argumenttext</key>
+				<string>center</string>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>EB1F21E2-9C79-43F0-B879-D81DA17D3ED5</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>3</integer>
+				<key>argumenttext</key>
+				<string>fill</string>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>AFC59036-5E36-4F28-A452-F7DADFDE3057</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>3</integer>
+				<key>argumenttext</key>
+				<string>fill</string>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>ED534B8E-4D9D-4C1E-BD3E-64CE6112C4D3</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Finder Unclutter arranges Finder windows and tabs: merge every window and tab into one, then lay it out as a single pane or a dual pane on the display you are working on.
+
+Run `uc` in Alfred, or bind the hotkeys in this workflow.
+
+Requires Accessibility and Automation permissions for Alfred (System Settings &gt; Privacy &amp; Security).</string>
+	<key>uidata</key>
+	<dict>
+		<key>02D137EC-EC22-4DA1-93E5-84BFE6075E3E</key>
+		<dict>
+			<key>xpos</key>
+			<real>3000</real>
+			<key>ypos</key>
+			<real>1185</real>
+		</dict>
+		<key>06333535-E592-4267-BB61-C200A5732B3E</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>note</key>
+			<string>Double Finder window</string>
+			<key>xpos</key>
+			<real>235</real>
+			<key>ypos</key>
+			<real>410</real>
+		</dict>
+		<key>0F68AAC7-EEA5-4D70-82CB-52D9589053CD</key>
+		<dict>
+			<key>xpos</key>
+			<real>3090</real>
+			<key>ypos</key>
+			<real>1185</real>
+		</dict>
+		<key>14372416-A42A-4672-B666-1A4F7E948846</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>note</key>
+			<string>single pane → down</string>
+			<key>xpos</key>
+			<real>2830</real>
+			<key>ypos</key>
+			<real>160</real>
+		</dict>
+		<key>1775772B-6D64-40C2-AACF-BEDEBD81E3D2</key>
+		<dict>
+			<key>xpos</key>
+			<real>2245</real>
+			<key>ypos</key>
+			<real>485</real>
+		</dict>
+		<key>192FA874-2EF4-445D-B9A3-91E37C9E8629</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>note</key>
+			<string>Toggle show/hide Finder windows</string>
+			<key>xpos</key>
+			<real>2065</real>
+			<key>ypos</key>
+			<real>335</real>
+		</dict>
+		<key>1C01D3A9-93AE-40AC-81DC-9A001BFC22DE</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>note</key>
+			<string>Single Finder window</string>
+			<key>xpos</key>
+			<real>235</real>
+			<key>ypos</key>
+			<real>270</real>
+		</dict>
+		<key>2434B5D1-F72E-414C-A54E-C6AABCF098BB</key>
+		<dict>
+			<key>xpos</key>
+			<real>3400</real>
+			<key>ypos</key>
+			<real>620</real>
+		</dict>
+		<key>29057A8E-1F86-4F14-A164-450EC5F15461</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>note</key>
+			<string>single pane → center</string>
+			<key>xpos</key>
+			<real>2520</real>
+			<key>ypos</key>
+			<real>15</real>
+		</dict>
+		<key>40A64B13-6F9E-4273-B184-57B6EE7DA66A</key>
+		<dict>
+			<key>xpos</key>
+			<real>2520</real>
+			<key>ypos</key>
+			<real>440</real>
+		</dict>
+		<key>4A4DF7A4-082B-490D-89A1-F5508725E88B</key>
+		<dict>
+			<key>xpos</key>
+			<real>2375</real>
+			<key>ypos</key>
+			<real>475</real>
+		</dict>
+		<key>4DB44DA2-58F0-46E2-920E-71B0BCDAD222</key>
+		<dict>
+			<key>xpos</key>
+			<real>3290</real>
+			<key>ypos</key>
+			<real>650</real>
+		</dict>
+		<key>52F99AAF-EBFA-4B71-AFA8-24BB9B4C01BA</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>note</key>
+			<string>dual pane → top</string>
+			<key>xpos</key>
+			<real>2520</real>
+			<key>ypos</key>
+			<real>930</real>
+		</dict>
+		<key>5FB3350F-C392-4996-9806-1312E5482BCC</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>note</key>
+			<string>dual pane → right</string>
+			<key>xpos</key>
+			<real>2785</real>
+			<key>ypos</key>
+			<real>1075</real>
+		</dict>
+		<key>602ABC6D-3B73-4C2F-A166-170852176784</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>10</integer>
+			<key>note</key>
+			<string>Show Finder Unclutter Alfred Workflow</string>
+			<key>xpos</key>
+			<real>30</real>
+			<key>ypos</key>
+			<real>545</real>
+		</dict>
+		<key>603A4983-1A70-4DA6-A7B2-820FF4FD5039</key>
+		<dict>
+			<key>xpos</key>
+			<real>3130</real>
+			<key>ypos</key>
+			<real>490</real>
+		</dict>
+		<key>663E076A-FF78-4603-B4E2-40E1374DDC0D</key>
+		<dict>
+			<key>xpos</key>
+			<real>2360</real>
+			<key>ypos</key>
+			<real>335</real>
+		</dict>
+		<key>66740EBF-8D95-40D7-8738-D72EDAA5D569</key>
+		<dict>
+			<key>xpos</key>
+			<real>3000</real>
+			<key>ypos</key>
+			<real>580</real>
+		</dict>
+		<key>694E5D71-3095-42DF-80D4-A5290B9C55BC</key>
+		<dict>
+			<key>xpos</key>
+			<real>2710</real>
+			<key>ypos</key>
+			<real>1185</real>
+		</dict>
+		<key>69967A07-C457-4CB4-8D09-E99FDB541AC1</key>
+		<dict>
+			<key>xpos</key>
+			<real>2250</real>
+			<key>ypos</key>
+			<real>930</real>
+		</dict>
+		<key>6E40A959-6DAC-4D8D-9FFA-207095598497</key>
+		<dict>
+			<key>xpos</key>
+			<real>230</real>
+			<key>ypos</key>
+			<real>670</real>
+		</dict>
+		<key>70ECF995-3141-4006-B0B4-E98F03D333F3</key>
+		<dict>
+			<key>note</key>
+			<string>Close all Finder windows</string>
+			<key>xpos</key>
+			<real>2360</real>
+			<key>ypos</key>
+			<real>895</real>
+		</dict>
+		<key>74707476-EE51-42B7-A02E-68100C055827</key>
+		<dict>
+			<key>xpos</key>
+			<real>3000</real>
+			<key>ypos</key>
+			<real>435</real>
+		</dict>
+		<key>75980A59-5206-4DB5-9F2E-88C00FCBEACF</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>note</key>
+			<string>dual pane → down</string>
+			<key>xpos</key>
+			<real>2520</real>
+			<key>ypos</key>
+			<real>1080</real>
+		</dict>
+		<key>79C49BE5-DA02-418E-854B-E82D54F5599D</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>note</key>
+			<string>dual pane → left</string>
+			<key>xpos</key>
+			<real>2790</real>
+			<key>ypos</key>
+			<real>925</real>
+		</dict>
+		<key>7ABA21D5-7E58-4E8C-88CA-23265D529C5E</key>
+		<dict>
+			<key>note</key>
+			<string>Show minimized Finder windows; Merge; Uniq</string>
+			<key>xpos</key>
+			<real>3400</real>
+			<key>ypos</key>
+			<real>745</real>
+		</dict>
+		<key>7D771252-D04E-4B29-80B9-DF08A11D8EA4</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>note</key>
+			<string>Close all tabs and windows other than the current</string>
+			<key>xpos</key>
+			<real>2065</real>
+			<key>ypos</key>
+			<real>745</real>
+		</dict>
+		<key>80BD1FC0-A34A-4C84-B635-F6B4F9E53399</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>note</key>
+			<string>dual pane → center (vertical)</string>
+			<key>xpos</key>
+			<real>2785</real>
+			<key>ypos</key>
+			<real>1220</real>
+		</dict>
+		<key>8F900970-BC72-4DC1-807E-537E8D112242</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>note</key>
+			<string>Close all Finder windows</string>
+			<key>xpos</key>
+			<real>2065</real>
+			<key>ypos</key>
+			<real>910</real>
+		</dict>
+		<key>91A3A96E-A6E1-4E92-9C20-68F21B90F250</key>
+		<dict>
+			<key>note</key>
+			<string>Close other tabs and windows</string>
+			<key>xpos</key>
+			<real>2360</real>
+			<key>ypos</key>
+			<real>745</real>
+		</dict>
+		<key>92685AB4-3C36-4BB7-8B58-933F02105089</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>note</key>
+			<string>single pane → left</string>
+			<key>xpos</key>
+			<real>2675</real>
+			<key>ypos</key>
+			<real>15</real>
+		</dict>
+		<key>987D0535-F7A9-49B2-A8AE-BB9A3CE7151F</key>
+		<dict>
+			<key>xpos</key>
+			<real>395</real>
+			<key>ypos</key>
+			<real>550</real>
+		</dict>
+		<key>99483FC5-AB90-440E-9150-F66FBE2589E7</key>
+		<dict>
+			<key>xpos</key>
+			<real>3810</real>
+			<key>ypos</key>
+			<real>365</real>
+		</dict>
+		<key>9C68A7A5-D136-42B3-AB7C-398A8139641D</key>
+		<dict>
+			<key>xpos</key>
+			<real>3290</real>
+			<key>ypos</key>
+			<real>545</real>
+		</dict>
+		<key>AD791D09-B3A5-48E1-BEFF-0435E9EEAB3A</key>
+		<dict>
+			<key>xpos</key>
+			<real>645</real>
+			<key>ypos</key>
+			<real>575</real>
+		</dict>
+		<key>AFC59036-5E36-4F28-A452-F7DADFDE3057</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>note</key>
+			<string>single pane → fill (horizontal)</string>
+			<key>xpos</key>
+			<real>2520</real>
+			<key>ypos</key>
+			<real>1370</real>
+		</dict>
+		<key>B580713D-0F37-45A6-BC5F-90A3A5DEC732</key>
+		<dict>
+			<key>note</key>
+			<string>Layout Finder Window(s)</string>
+			<key>xpos</key>
+			<real>3625</real>
+			<key>ypos</key>
+			<real>335</real>
+		</dict>
+		<key>B9C1809B-CFC7-4B51-90AF-5ED974FE27AA</key>
+		<dict>
+			<key>note</key>
+			<string>Hide others</string>
+			<key>xpos</key>
+			<real>3930</real>
+			<key>ypos</key>
+			<real>800</real>
+		</dict>
+		<key>C1792E7D-79AF-4A2D-9902-8B3842E436C9</key>
+		<dict>
+			<key>xpos</key>
+			<real>2245</real>
+			<key>ypos</key>
+			<real>560</real>
+		</dict>
+		<key>C62D3264-F63F-4E1A-91E9-C6AA59923B7F</key>
+		<dict>
+			<key>xpos</key>
+			<real>2740</real>
+			<key>ypos</key>
+			<real>405</real>
+		</dict>
+		<key>C99932BF-F500-4811-AB0C-B447B4EB960D</key>
+		<dict>
+			<key>xpos</key>
+			<real>535</real>
+			<key>ypos</key>
+			<real>670</real>
+		</dict>
+		<key>D3C8E3EB-F514-4785-9B76-D4664FFFFA0E</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>note</key>
+			<string>single pane → fill</string>
+			<key>xpos</key>
+			<real>2520</real>
+			<key>ypos</key>
+			<real>160</real>
+		</dict>
+		<key>D4731FD4-CAC0-48A1-99F7-07F235D13ACE</key>
+		<dict>
+			<key>xpos</key>
+			<real>3400</real>
+			<key>ypos</key>
+			<real>515</real>
+		</dict>
+		<key>D786CBC8-E75A-42DA-845D-A74401D86DD6</key>
+		<dict>
+			<key>xpos</key>
+			<real>225</real>
+			<key>ypos</key>
+			<real>545</real>
+		</dict>
+		<key>DACAEF3F-E4F0-4C24-8FC0-390740BC3673</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>note</key>
+			<string>single pane → right</string>
+			<key>xpos</key>
+			<real>2670</real>
+			<key>ypos</key>
+			<real>160</real>
+		</dict>
+		<key>DB194341-1ECD-4A31-AAF9-4A62A3BB31F1</key>
+		<dict>
+			<key>xpos</key>
+			<real>3855</real>
+			<key>ypos</key>
+			<real>780</real>
+		</dict>
+		<key>DC3D71E7-DD9B-4BED-86DF-B6F4B9792B9D</key>
+		<dict>
+			<key>xpos</key>
+			<real>400</real>
+			<key>ypos</key>
+			<real>700</real>
+		</dict>
+		<key>E0B66618-E07B-49DD-BA7E-3DB533FA6982</key>
+		<dict>
+			<key>xpos</key>
+			<real>2740</real>
+			<key>ypos</key>
+			<real>550</real>
+		</dict>
+		<key>E594ADD6-8F06-46D3-A543-91326D9F536D</key>
+		<dict>
+			<key>xpos</key>
+			<real>3000</real>
+			<key>ypos</key>
+			<real>690</real>
+		</dict>
+		<key>E89C3AE5-8AEF-46F3-9DE4-AE73A04D7724</key>
+		<dict>
+			<key>note</key>
+			<string>Layout Finder Window(s)</string>
+			<key>xpos</key>
+			<real>3690</real>
+			<key>ypos</key>
+			<real>655</real>
+		</dict>
+		<key>E9686983-CFFB-42C7-AC8B-1618E5DB0122</key>
+		<dict>
+			<key>note</key>
+			<string>Hide others</string>
+			<key>xpos</key>
+			<real>3810</real>
+			<key>ypos</key>
+			<real>470</real>
+		</dict>
+		<key>EAC50034-127C-4901-BEB1-94AD94930716</key>
+		<dict>
+			<key>note</key>
+			<string>Show minimized Finder windows; Merge; Uniq</string>
+			<key>xpos</key>
+			<real>3400</real>
+			<key>ypos</key>
+			<real>335</real>
+		</dict>
+		<key>EB1F21E2-9C79-43F0-B879-D81DA17D3ED5</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>note</key>
+			<string>dual pane → center (horizontal)</string>
+			<key>xpos</key>
+			<real>2520</real>
+			<key>ypos</key>
+			<real>1220</real>
+		</dict>
+		<key>ED534B8E-4D9D-4C1E-BD3E-64CE6112C4D3</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>note</key>
+			<string>single pane → fill (vertical)</string>
+			<key>xpos</key>
+			<real>2785</real>
+			<key>ypos</key>
+			<real>1370</real>
+		</dict>
+		<key>F1E951E9-9AE4-4860-B38E-0E98EDB68930</key>
+		<dict>
+			<key>xpos</key>
+			<real>565</real>
+			<key>ypos</key>
+			<real>440</real>
+		</dict>
+		<key>F581DD95-1580-4E0B-92D6-CEACE22EB113</key>
+		<dict>
+			<key>note</key>
+			<string>Open config</string>
+			<key>xpos</key>
+			<real>2360</real>
+			<key>ypos</key>
+			<real>620</real>
+		</dict>
+		<key>F9A0EA61-045E-470A-9676-99F386386B4E</key>
+		<dict>
+			<key>xpos</key>
+			<real>3035</real>
+			<key>ypos</key>
+			<real>195</real>
+		</dict>
+		<key>FBA27933-4D1E-4114-B687-11563BA6E7C1</key>
+		<dict>
+			<key>xpos</key>
+			<real>2915</real>
+			<key>ypos</key>
+			<real>580</real>
+		</dict>
+		<key>FBEBC376-B9AA-4D52-B667-E637B1C3D1DB</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>note</key>
+			<string>single pane → top</string>
+			<key>xpos</key>
+			<real>2830</real>
+			<key>ypos</key>
+			<real>15</real>
+		</dict>
+		<key>FDF82BE7-DE6C-4C5E-A6B9-912747422320</key>
+		<dict>
+			<key>xpos</key>
+			<real>2065</real>
+			<key>ypos</key>
+			<real>505</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>200</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Setting the Sidebar Width to 0 will hide the sidebar. Otherwise, this value is set as the width of the sidebar (0-500, default = 200).</string>
+			<key>label</key>
+			<string>Sidebar Width</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>sidebar_width</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>single</string>
+				<key>pairs</key>
+				<array>
+					<array>
+						<string>left</string>
+						<string>single</string>
+					</array>
+					<array>
+						<string>left and right</string>
+						<string>double</string>
+					</array>
+					<array>
+						<string>none</string>
+						<string>none</string>
+					</array>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>If set to "single", the sidebar is shown only in the left-hand side Finder window (left, left and right, or none, default = left).</string>
+			<key>label</key>
+			<string>Sidebars in horizonal dual pane mode</string>
+			<key>type</key>
+			<string>popupbutton</string>
+			<key>variable</key>
+			<string>sidebars</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<false/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+			</dict>
+			<key>description</key>
+			<string>If checked, a "please wait" overlay is shown while the single/dual pane is being arranged (default = unchecked).</string>
+			<key>label</key>
+			<string>Wait message</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>wait_message</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<false/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+			</dict>
+			<key>description</key>
+			<string>If checked, other apps will be hidden while the single/dual Finder pane gets displayed (default = unchecked).</string>
+			<key>label</key>
+			<string>Hide other apps</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>hide_others</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>~</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Specifies the UNIX path of a new folder to open when no Finder window is present (default = ~).</string>
+			<key>label</key>
+			<string>Home folder path</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>home_folder</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>list</string>
+				<key>pairs</key>
+				<array>
+					<array>
+						<string>list</string>
+						<string>list</string>
+					</array>
+					<array>
+						<string>icon</string>
+						<string>icon</string>
+					</array>
+					<array>
+						<string>column</string>
+						<string>column</string>
+					</array>
+					<array>
+						<string>gallery</string>
+						<string>gallery</string>
+					</array>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>The finder view type used in the primary pane (list, icon, column, or gallery, default = list).</string>
+			<key>label</key>
+			<string>View type in primary pane</string>
+			<key>type</key>
+			<string>popupbutton</string>
+			<key>variable</key>
+			<string>view_type_primary</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>list</string>
+				<key>pairs</key>
+				<array>
+					<array>
+						<string>list</string>
+						<string>list</string>
+					</array>
+					<array>
+						<string>icon</string>
+						<string>icon</string>
+					</array>
+					<array>
+						<string>column</string>
+						<string>column</string>
+					</array>
+					<array>
+						<string>gallery</string>
+						<string>gallery</string>
+					</array>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>The finder view type used in the secondary pane (list, icon, column, or gallery, default = list).</string>
+			<key>label</key>
+			<string>View type of secondary pane</string>
+			<key>type</key>
+			<string>popupbutton</string>
+			<key>variable</key>
+			<string>view_type_secondary</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>parent</string>
+				<key>pairs</key>
+				<array>
+					<array>
+						<string>same as primary</string>
+						<string>same</string>
+					</array>
+					<array>
+						<string>home</string>
+						<string>home</string>
+					</array>
+					<array>
+						<string>parent</string>
+						<string>parent</string>
+					</array>
+					<array>
+						<string>desktop</string>
+						<string>desktop</string>
+					</array>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>The contents presented on the secondary side of the dual pane (same as primary, home, parent,  desktop, default = parent)</string>
+			<key>label</key>
+			<string>Contents on secondary pane</string>
+			<key>type</key>
+			<string>popupbutton</string>
+			<key>variable</key>
+			<string>folder_secondary</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<false/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+			</dict>
+			<key>description</key>
+			<string>Reverse the contents of the left (primary) and right (secondary) panes in the dual pane mode (default = unchecked).</string>
+			<key>label</key>
+			<string>Reverse panes</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>reverse</string>
+		</dict>
+	</array>
+	<key>variables</key>
+	<dict>
+		<key>delay_menu_operation</key>
+		<string>0.3</string>
+		<key>delay_system_events_launch</key>
+		<string>0.2</string>
+		<key>delay_window_operation</key>
+		<string>0.2</string>
+		<key>show_desktop_keycode</key>
+		<string>103</string>
+		<key>wait_in_seconds</key>
+		<string>0.1</string>
+	</dict>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>2.0</string>
+	<key>webaddress</key>
+	<string>https://github.com/finder-unclutter</string>
+</dict>
+</plist>

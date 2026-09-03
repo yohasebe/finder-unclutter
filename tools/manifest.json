@@ -1,0 +1,13 @@
+{
+  "_comment": "Alfred object uid -> source/scripts/ filename. Keep in sync when adding or removing Run Script objects.",
+  "B580713D-0F37-45A6-BC5F-90A3A5DEC732": "single-pane.applescript",
+  "E89C3AE5-8AEF-46F3-9DE4-AE73A04D7724": "dual-pane.applescript",
+  "EAC50034-127C-4901-BEB1-94AD94930716": "merge-tabs-single.applescript",
+  "7ABA21D5-7E58-4E8C-88CA-23265D529C5E": "merge-tabs-dual.applescript",
+  "E9686983-CFFB-42C7-AC8B-1618E5DB0122": "hide-others.applescript",
+  "B9C1809B-CFC7-4B51-90AF-5ED974FE27AA": "hide-others.applescript",
+  "AD791D09-B3A5-48E1-BEFF-0435E9EEAB3A": "show-desktop.applescript",
+  "70ECF995-3141-4006-B0B4-E98F03D333F3": "close-all-windows.applescript",
+  "91A3A96E-A6E1-4E92-9C20-68F21B90F250": "close-other-windows.applescript",
+  "F581DD95-1580-4E0B-92D6-CEACE22EB113": "open-config.applescript"
+}

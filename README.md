@@ -20,14 +20,27 @@ An Alfred 🎩 workflow that removes duplicate Finder tabs and windows and arran
 
 - [Alfred 5](https://www.alfredapp.com/) with Powerpack
 
-This workflow has been developed and tested on macOS Sonoma and macOS Tahoe.
+This workflow has been developed and tested on macOS Sonoma and macOS 26 Tahoe. Finder may be set to any language.
 
 ## Installation
 
-To install, download [Finder Unclutter Alfred Workflow](https://github.com/yohasebe/finder-unclutter/raw/main/finder-unclutter.alfredworkflow) (version 1.8)
+To install, download [Finder Unclutter Alfred Workflow](https://github.com/yohasebe/finder-unclutter/raw/main/finder-unclutter.alfredworkflow) (version 2.0)
 
 ## Change Log
 
+- 2.0 (2026-08-09)
+  - **Finder no longer has to be set to English.** Tabs are now built with Finder's own New Tab shortcut instead of the localised "Merge All Windows" menu item, so merging works in any language. The language-switching prompt and the `defaults write com.apple.Finder AppleLanguages` step have been removed.
+  - **Windows are laid out on the display they are already on**, instead of always on the primary display.
+  - **The Dock and the menu bar are excluded properly.** Screen geometry now comes from `NSScreen.visibleFrame` rather than a hard-coded 37px menu bar, so windows no longer sit under the Dock or overhang the bottom of the screen.
+  - **Much faster.** `system_profiler` -- which took seconds on the first run after a reboot -- is gone, and re-running on an already tidy window is now a no-op. The "first call may take longer" notice is no longer needed.
+  - Fixed: the secondary pane ignored its own view type in the side-by-side layout.
+  - Fixed: in the stacked layout, the `single` / `none` sidebar settings and `reverse` had no effect.
+  - Fixed: "Hide other apps" never did anything.
+  - Fixed: a bad Home Folder setting reported the error and then failed again in the middle of arranging windows.
+  - Fixed: "Close Other Tabs and Windows" could loop forever on a window that would not close.
+  - Panes are now sized after their sidebar is applied, so a narrow pane is no longer padded out by the previous run's sidebar.
+  - The "please wait" overlay is now off by default; the operation it covered no longer takes long enough to need it.
+  - The AppleScript sources live in `source/scripts/` and are injected into `info.plist` by `tools/build.py`.
 - 1.8 (2025-10-26)
   - Added configurable delays to AppleScript operations for improved stability
   - Delay timings can be adjusted via environment variables
@@ -37,21 +50,6 @@ To install, download [Finder Unclutter Alfred Workflow](https://github.com/yohas
 - 0.1.6 (2025-02-04)
   - Show Desktop menu item added
 
-## Setting up
-
-This Workflow only functions properly if the language setting of Finder.app is set to **English** due to the way it interacts with Finder's interface.
-
-When this Workflow is launched, if the language of Finder.app is not English (`en`), a dialog will be displayed. Clicking OK will automatically change the language setting of Finder.app to English.
-
-<img src="./images/language-change-dialog.png" width=200>&nbsp;&nbsp; 
-<img src="./images/language-changed.png" width=200>
-
-If you want to revert the language setting of Finder back to its original state, you can do so in macOS's `System Settings` under `Language & Region` / `Applications`. A system restart may be required after changing these settings. Alternatively, you can revert it by executing the following command. Please specify `LANG_CODE` in the [ISO 639-1](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html) format as appropriate.
-
-```
-defaults write com.apple.Finder AppleLanguages '("LANG_CODE")'; killall Finder
-```
-
 ## macOS Permissions
 
 On first run macOS prompts for automation access. Approve the dialogs for **Alfred** so it can control **Finder** and **System Events**. If the prompts were dismissed, open `System Settings → Privacy & Security` and enable:
@@ -59,12 +57,12 @@ On first run macOS prompts for automation access. Approve the dialogs for **Alfr
 - `Accessibility`: allow Alfred to control the computer.
 - `Automation`: under Alfred, check Finder and System Events.
 
-The workflow writes to `com.apple.Finder AppleLanguages` when switching Finder to English and automatically restarts Finder via `killall Finder`.
+Finder can be set to any language; the workflow does not read or change your language settings.
 
 ## Troubleshooting
 
-- Finder still opens in the previous language: rerun the workflow and accept the language change, or manually set Finder to English in `System Settings → Language & Region → Applications`.
-- Windows do not merge completely: increase `wait_in_seconds` in the workflow configuration so Finder has more time to reopen slow network or external volumes before merging.
+- Folders end up in separate windows instead of tabs: this is the fallback the workflow takes when Finder does not respond to the New Tab shortcut in time. Raise `delay_window_operation` so Finder gets longer to settle, and check that Alfred is still listed under `Privacy & Security → Accessibility`.
+- Windows do not merge completely: increase `delay_window_operation` so Finder has more time to load slow network or external volumes.
 - Automation prompts reappear or automation steps fail: recheck Alfred under `Privacy & Security → Accessibility` and `Automation`, then restart Alfred and Finder.
 
 ## Features
@@ -119,9 +117,9 @@ For details on each of the configurable parameters, see [below](#configuration).
 
 Setting the Sidebar Width to 0 will hide the sidebar. Otherwise, this value is set as the width of the sidebar (`0-500`, default = `200`).
 
-#### Sidebars in horizontal dual pane mode
+#### Sidebars in dual pane mode
 
-If set to `single`, the sidebar is shown only in the left-hand side Finder window (default = single).
+`single` shows the sidebar in the leading pane only -- the left one in a side-by-side split, the top one in a stacked split -- and widens that pane by half the sidebar width so both file lists come out the same size. `double` gives both panes a sidebar, `none` gives neither (default = `single`).
 
 #### Home folder path
 
@@ -142,7 +140,7 @@ The contents presented on the secondary pane (`same as primary`, `home`, `parent
 
 #### Wait message
 
-If checked, "uncluttering" message is shown before single/dual pane Finder window appears (default = `checked`).
+If checked, an "uncluttering" overlay is shown while the single/dual pane is being arranged (default = `unchecked`). Since version 2.0 the layout is fast enough that the overlay is mostly a flash on screen.
 
 #### Hide other apps
 
@@ -155,10 +153,23 @@ Reverse the contents of the primary (left/top) and secondary (right/bottom) pane
 ## Environment Variables
 
 - `show_desktop_keycode`: The keycode of the key assigned to Mission Control's "Show Desktop" (default = `103`).
-- `wait_in_seconds`: Delay between steps when arranging dual-pane layout (default = `0.1`). Increase if network drives or external volumes don't load in time.
-- `delay_system_events_launch`: Delay after launching System Events before GUI operations (default = `0.2`). Increase if menu operations fail to execute.
-- `delay_menu_operation`: Delay after clicking menu items like "Merge All Windows" (default = `0.3`). Increase if operations are not completed properly.
-- `delay_window_operation`: Delay after window open/close operations (default = `0.2`). Increase if windows don't fully load before next operation.
+- `wait_in_seconds`: Delay between steps when arranging the dual-pane layout (default = `0.1`). Increase if network drives or external volumes don't load in time.
+- `delay_system_events_launch`: Delay after launching System Events before GUI operations (default = `0.2`). Increase if the New Tab shortcut is sometimes missed.
+- `delay_window_operation`: Delay after window open/close operations (default = `0.2`).
+- `delay_menu_operation`: Kept for compatibility; no longer used now that tab creation waits for Finder rather than sleeping.
+
+## Development
+
+The AppleScript sources are the files in `source/scripts/`; `source/info.plist` is a build artifact that carries a copy of each of them. `--#include lib/…` lines are expanded at build time.
+
+```bash
+python3 tools/build.py              # inject source/scripts/ into source/info.plist
+python3 tools/build.py --package    # also write finder-unclutter.alfredworkflow
+python3 tools/build.py --install    # also copy info.plist into the live Alfred workflow
+python3 tools/extract.py            # pull scripts back out after editing inside Alfred
+```
+
+`tools/manifest.json` maps each Alfred Run Script object's uid to its file, and the build fails if a Run Script object has no entry.
 
 ## Author
 
