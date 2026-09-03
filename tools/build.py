@@ -9,6 +9,7 @@
 import argparse
 import os
 import plistlib
+import re
 import shutil
 import subprocess
 import sys
@@ -104,18 +105,32 @@ def lint():
     print("lint       info.plist ok")
 
 
-# What is allowed into the distributed .alfredworkflow, as fnmatch patterns on
-# the path relative to source/. Anything under source/ that matches none of
-# these aborts the build rather than shipping.
+# What may go into the distributed .alfredworkflow. Anything under source/ that
+# is not allowed here aborts the build rather than shipping, because the
+# 2025-09-22 release went out with an `info.plist.bak` inside it -- picked up by
+# Alfred's own GUI export from the live workflow directory -- and the history had
+# to be rewritten to get it out again.
 #
-# The list is patterns rather than filenames because Alfred names List Filter
-# images by content hash and adds new ones as icons change. It still fails
-# closed, which is the point: the 2025-09-22 release went out with an
-# `info.plist.bak` inside it, picked up by Alfred's own GUI export from the live
-# workflow directory. Building from source/ already avoids that, but only a
-# rule that rejects the unexpected keeps it from coming back.
-BUNDLE_ALLOW = ("info.plist", "*.png", "List Filter Images/*.png")
+# Files are matched by name wherever the set is fixed, and only by pattern where
+# Alfred itself generates names: List Filter images, which it names by content
+# hash, and per-object icons, which it writes to the workflow root as
+# <object-uid>.png. Those two patterns are narrow on purpose -- a bare "*.png"
+# would wave through a screenshot dropped into source/, which is the same shape
+# of mistake as the .bak.
+BUNDLE_ALLOW_NAMES = ("info.plist", "icon.png", "finder-unclutter@2x.png")
+BUNDLE_ALLOW_GLOBS = ("List Filter Images/*.png",)
+ALFRED_OBJECT_ICON = re.compile(
+    r"^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}\.png$"
+)
 BUNDLE_REQUIRE = ("info.plist",)
+
+
+def allowed_in_bundle(rel_path):
+    if rel_path in BUNDLE_ALLOW_NAMES:
+        return True
+    if any(fnmatch(rel_path, glob) for glob in BUNDLE_ALLOW_GLOBS):
+        return True
+    return bool(ALFRED_OBJECT_ICON.match(rel_path))
 
 
 def package():
@@ -132,12 +147,13 @@ def package():
             members.append(os.path.relpath(full, src))
     members.sort()
 
-    rejected = [m for m in members if not any(fnmatch(m, p) for p in BUNDLE_ALLOW)]
+    rejected = [m for m in members if not allowed_in_bundle(m)]
     if rejected:
         sys.exit(
             "error: source/ holds files that are not allowed in the workflow bundle:\n"
             + "".join(f"  {m}\n" for m in rejected)
-            + "Remove them, or add a pattern to BUNDLE_ALLOW in tools/build.py."
+            + "Remove them, or allow them in tools/build.py (BUNDLE_ALLOW_NAMES / "
+            + "BUNDLE_ALLOW_GLOBS)."
         )
     missing = [p for p in BUNDLE_REQUIRE if p not in members]
     if missing:
