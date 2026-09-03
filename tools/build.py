@@ -122,7 +122,11 @@ BUNDLE_ALLOW_GLOBS = ("List Filter Images/*.png",)
 ALFRED_OBJECT_ICON = re.compile(
     r"^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}\.png$"
 )
-BUNDLE_REQUIRE = ("info.plist",)
+# The check runs both ways. Rejecting the unexpected stops a stray file from
+# shipping; requiring every named file stops one from quietly going missing,
+# which is the same mistake pointing the other way -- a bundle with no icon.png
+# installs perfectly happily and simply has no icon.
+BUNDLE_REQUIRE = BUNDLE_ALLOW_NAMES
 
 
 def allowed_in_bundle(rel_path):
