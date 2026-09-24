@@ -91,11 +91,9 @@ Gemfile.lock
 # .rubocop-https?--*
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,ruby
-# Agent instructions, kept local
 AGENTS.md
 CLAUDE.md
 
-# Scratch files used to brief a reviewing agent
 REVIEW-BRIEF.md
 
 # Byte-code from tools/
