@@ -9,12 +9,9 @@
 import argparse
 import os
 import plistlib
-import re
 import shutil
 import subprocess
 import sys
-import zipfile
-from fnmatch import fnmatch
 
 from workflow import (
     PLIST,
@@ -105,68 +102,20 @@ def lint():
     print("lint       info.plist ok")
 
 
-# What may go into the distributed .alfredworkflow. Anything under source/ that
-# is not allowed here aborts the build rather than shipping, because the
-# 2025-09-22 release went out with an `info.plist.bak` inside it -- picked up by
-# Alfred's own GUI export from the live workflow directory -- and the history had
-# to be rewritten to get it out again.
-#
-# Files are matched by name wherever the set is fixed, and only by pattern where
-# Alfred itself generates names: List Filter images, which it names by content
-# hash, and per-object icons, which it writes to the workflow root as
-# <object-uid>.png. Those two patterns are narrow on purpose -- a bare "*.png"
-# would wave through a screenshot dropped into source/, which is the same shape
-# of mistake as the .bak.
-BUNDLE_ALLOW_NAMES = ("info.plist", "icon.png", "finder-unclutter@2x.png")
-BUNDLE_ALLOW_GLOBS = ("List Filter Images/*.png",)
-ALFRED_OBJECT_ICON = re.compile(
-    r"^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}\.png$"
-)
-# The check runs both ways. Rejecting the unexpected stops a stray file from
-# shipping; requiring every named file stops one from quietly going missing,
-# which is the same mistake pointing the other way -- a bundle with no icon.png
-# installs perfectly happily and simply has no icon.
-BUNDLE_REQUIRE = BUNDLE_ALLOW_NAMES
-
-
-def allowed_in_bundle(rel_path):
-    if rel_path in BUNDLE_ALLOW_NAMES:
-        return True
-    if any(fnmatch(rel_path, glob) for glob in BUNDLE_ALLOW_GLOBS):
-        return True
-    return bool(ALFRED_OBJECT_ICON.match(rel_path))
-
-
 def package():
-    out = ROOT / "finder-unclutter.alfredworkflow"
-    src = ROOT / "source"
+    """Build the .alfredworkflow from the allowlist in tools/pack_workflow.rb.
 
-    members = []
-    for dirpath, dirnames, filenames in os.walk(src):
-        dirnames[:] = [d for d in dirnames if d != "scripts"]
-        for fn in sorted(filenames):
-            if fn == ".DS_Store":
-                continue
-            full = os.path.join(dirpath, fn)
-            members.append(os.path.relpath(full, src))
-    members.sort()
-
-    rejected = [m for m in members if not allowed_in_bundle(m)]
-    if rejected:
-        sys.exit(
-            "error: source/ holds files that are not allowed in the workflow bundle:\n"
-            + "".join(f"  {m}\n" for m in rejected)
-            + "Remove them, or allow them in tools/build.py (BUNDLE_ALLOW_NAMES / "
-            + "BUNDLE_ALLOW_GLOBS)."
-        )
-    missing = [p for p in BUNDLE_REQUIRE if p not in members]
-    if missing:
-        sys.exit("error: missing from source/: " + ", ".join(missing))
-
-    with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as zf:
-        for m in members:
-            zf.write(os.path.join(src, m), m)
-    print(f"packaged   {out.name} ({len(members)} files)")
+    The allowlist lives there and only there. Alfred's GUI export ships
+    everything in the workflow directory except prefs.plist, which is how the
+    2025-09-22 release went out with an `info.plist.bak` inside it and the
+    history had to be rewritten to get it out again. A second copy of the rule
+    here would be a second thing to keep in step, so this shells out instead.
+    """
+    sys.stdout.flush()  # keep our own lines ahead of the packer's
+    packer = ROOT / "tools" / "pack_workflow.rb"
+    result = subprocess.run(["ruby", str(packer), "--write"])
+    if result.returncode != 0:
+        sys.exit(result.returncode)
 
 
 def install():
