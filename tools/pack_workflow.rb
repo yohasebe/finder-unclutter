@@ -162,13 +162,17 @@ unless leaking.empty?
   problems = true
 end
 
-# And the local-environment traces that should not travel either.
+# And the local-environment traces that should not travel either: a home
+# directory, the per-user temporary area macOS hands out under /private/var/
+# folders (it is also reachable as /var/folders), and anything under a
+# dot-directory in the home folder, where tools keep their own settings.
+TRACES = %r{/Users/[a-z]|/private/|/var/folders/|~/\.}i.freeze
 traces = allowed.select do |f|
   next false if f =~ /\.(png|woff2|icns)\z/i
-  File.binread(File.join(WF, f)) =~ %r{/Users/[a-z]}i
+  File.binread(File.join(WF, f)) =~ TRACES
 end
 unless traces.empty?
-  puts "ABSOLUTE HOME PATHS in files we would ship (#{traces.length}): #{traces.inspect}"
+  puts "LOCAL PATHS in files we would ship (#{traces.length}): #{traces.inspect}"
   problems = true
 end
 
