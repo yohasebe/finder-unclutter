@@ -162,21 +162,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>4DB44DA2-58F0-46E2-920E-71B0BCDAD222</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>2434B5D1-F72E-414C-A54E-C6AABCF098BB</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>33F43024-D5B4-4EDB-8901-298BE16F6854</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>52F99AAF-EBFA-4B71-AFA8-24BB9B4C01BA</key>
 		<array>
 			<dict>
@@ -227,28 +212,6 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>7CECB9AD-1D67-4C98-BD5B-6DA3BB14FAFD</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>9C68A7A5-D136-42B3-AB7C-398A8139641D</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>7CECB9AD-1D67-4C98-BD5B-6DA3BB14FAFD</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>4DB44DA2-58F0-46E2-920E-71B0BCDAD222</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -466,21 +429,6 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>9C68A7A5-D136-42B3-AB7C-398A8139641D</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>D4731FD4-CAC0-48A1-99F7-07F235D13ACE</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>33F43024-D5B4-4EDB-8901-298BE16F6854</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -1097,7 +1045,8 @@ on run argv
 
 	-- Read the screen before opening anything, so an existing window's display
 	-- decides the layout rather than wherever Finder drops a brand new window.
-	set targetRect to my regionForPosition(positionName, my activeUsableRect())
+	set screenRect to my activeUsableRect()
+	set targetRect to my regionForPosition(positionName, screenRect)
 
 	tell application "Finder"
 		activate
@@ -1116,7 +1065,11 @@ on run argv
 	-- Chrome first: Finder will not shrink a window below its sidebar plus a
 	-- minimum content area, so the sidebar has to be settled before the bounds.
 	my applyChrome(theWindow, viewName, sidebarPixels)
-	tell application "Finder" to set bounds of theWindow to my boundsOfRect(targetRect)
+	-- Finder may make the window wider than the region (the preview pane raises
+	-- its minimum width); if so, keep it on the screen rather than let it hang
+	-- off the edge.
+	my placeWindow(theWindow, targetRect)
+	my keepOnScreen(theWindow, screenRect)
 end run
 
 -- Alfred exposes workflow variables as environment variables. `system attribute`
@@ -1327,7 +1280,86 @@ on applyChrome(theWindow, viewName, sidebarPixels)
 			set sidebar width of theWindow to sidebarPixels
 		end try
 	end tell
-end applyChrome</string>
+end applyChrome
+
+-- Set a window's bounds and return what Finder actually made of them, as
+-- {left, top, width, height}. Finder silently widens a window it considers too
+-- narrow, and the floor is not a constant: it is ~316pt plus the sidebar plus,
+-- when the preview pane is showing, the preview pane's width -- which the user
+-- can drag, and which Finder remembers per folder, so it cannot be known in
+-- advance. Gallery view shows the preview by default. So ask Finder rather
+-- than predict it. The clamped bounds read back immediately; no delay is needed.
+on placeWindow(theWindow, aRect)
+	tell application "Finder"
+		set bounds of theWindow to my boundsOfRect(aRect)
+		set actualBounds to bounds of theWindow
+	end tell
+	set {boundsLeft, boundsTop, boundsRight, boundsBottom} to actualBounds
+	return {boundsLeft, boundsTop, boundsRight - boundsLeft, boundsBottom - boundsTop}
+end placeWindow
+
+-- Two panes side by side in the region {left, top, width, height}, the divider
+-- ideally at leadingWidth. Each pass records the smallest width Finder has
+-- shown it will accept for a pane (the width it widened that pane to), then
+-- puts the divider as close to the ideal as those floors allow.
+--
+-- When the floors add up to more than the region -- say two gallery panes in
+-- half a screen -- the pair is kept side by side at those widths and allowed
+-- to spill out of the region, centred on it but held inside the screen.
+-- Stacking one pane on top of the other would leave one of them unusable.
+-- Only when even the whole screen is too narrow do they overlap, pinned to its
+-- edges.
+on placeSideBySide(leadingWindow, trailingWindow, regionRect, leadingWidth, screenRect)
+	set {regionLeft, regionTop, regionWidth, regionHeight} to regionRect
+	set {screenLeft, screenTop, screenWidth, screenHeight} to screenRect
+	set idealLeading to leadingWidth
+	set leadingFloor to 0
+	set trailingFloor to 0
+	repeat 4 times
+		set trailingWidth to regionWidth - leadingWidth
+		set leadingGot to item 3 of my placeWindow(leadingWindow, {regionLeft, regionTop, leadingWidth, regionHeight})
+		set trailingGot to item 3 of my placeWindow(trailingWindow, {regionLeft + leadingWidth, regionTop, trailingWidth, regionHeight})
+		if leadingGot &gt; leadingWidth + 1 then set leadingFloor to leadingGot
+		if trailingGot &gt; trailingWidth + 1 then set trailingFloor to trailingGot
+		if leadingGot ≤ leadingWidth + 1 and trailingGot ≤ trailingWidth + 1 then return
+		if leadingFloor + trailingFloor &gt; regionWidth then exit repeat
+		set leadingWidth to idealLeading
+		if leadingWidth &lt; leadingFloor then set leadingWidth to leadingFloor
+		if leadingWidth &gt; regionWidth - trailingFloor then set leadingWidth to regionWidth - trailingFloor
+	end repeat
+	-- The region cannot hold both panes.
+	set leadingWidth to leadingGot
+	set trailingWidth to trailingGot
+	if leadingFloor &gt; leadingWidth then set leadingWidth to leadingFloor
+	if trailingFloor &gt; trailingWidth then set trailingWidth to trailingFloor
+	set pairWidth to leadingWidth + trailingWidth
+	if pairWidth ≤ screenWidth then
+		set pairLeft to regionLeft + (regionWidth - pairWidth) / 2
+		if pairLeft + pairWidth &gt; screenLeft + screenWidth then set pairLeft to screenLeft + screenWidth - pairWidth
+		if pairLeft &lt; screenLeft then set pairLeft to screenLeft
+		my placeWindow(leadingWindow, {pairLeft, regionTop, leadingWidth, regionHeight})
+		my placeWindow(trailingWindow, {pairLeft + leadingWidth, regionTop, trailingWidth, regionHeight})
+	else
+		my placeWindow(leadingWindow, {screenLeft, regionTop, leadingWidth, regionHeight})
+		my placeWindow(trailingWindow, {screenLeft + screenWidth - trailingWidth, regionTop, trailingWidth, regionHeight})
+	end if
+end placeSideBySide
+
+-- Pull a window back inside the screen area it was laid out on, when Finder
+-- made it wider or taller than the space it was given. Only ever moves the
+-- window, never resizes it: Finder has already said it will not go smaller.
+on keepOnScreen(theWindow, screenRect)
+	set {screenLeft, screenTop, screenWidth, screenHeight} to screenRect
+	tell application "Finder" to set {boundsLeft, boundsTop, boundsRight, boundsBottom} to bounds of theWindow
+	set shiftX to 0
+	set shiftY to 0
+	if boundsRight &gt; screenLeft + screenWidth then set shiftX to (screenLeft + screenWidth) - boundsRight
+	if boundsLeft + shiftX &lt; screenLeft then set shiftX to screenLeft - boundsLeft
+	if boundsBottom &gt; screenTop + screenHeight then set shiftY to (screenTop + screenHeight) - boundsBottom
+	if boundsTop + shiftY &lt; screenTop then set shiftY to screenTop - boundsTop
+	if shiftX is 0 and shiftY is 0 then return
+	tell application "Finder" to set bounds of theWindow to {round (boundsLeft + shiftX), round (boundsTop + shiftY), round (boundsRight + shiftX), round (boundsBottom + shiftY)}
+end keepOnScreen</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1504,6 +1536,85 @@ on applyChrome(theWindow, viewName, sidebarPixels)
 		end try
 	end tell
 end applyChrome
+
+-- Set a window's bounds and return what Finder actually made of them, as
+-- {left, top, width, height}. Finder silently widens a window it considers too
+-- narrow, and the floor is not a constant: it is ~316pt plus the sidebar plus,
+-- when the preview pane is showing, the preview pane's width -- which the user
+-- can drag, and which Finder remembers per folder, so it cannot be known in
+-- advance. Gallery view shows the preview by default. So ask Finder rather
+-- than predict it. The clamped bounds read back immediately; no delay is needed.
+on placeWindow(theWindow, aRect)
+	tell application "Finder"
+		set bounds of theWindow to my boundsOfRect(aRect)
+		set actualBounds to bounds of theWindow
+	end tell
+	set {boundsLeft, boundsTop, boundsRight, boundsBottom} to actualBounds
+	return {boundsLeft, boundsTop, boundsRight - boundsLeft, boundsBottom - boundsTop}
+end placeWindow
+
+-- Two panes side by side in the region {left, top, width, height}, the divider
+-- ideally at leadingWidth. Each pass records the smallest width Finder has
+-- shown it will accept for a pane (the width it widened that pane to), then
+-- puts the divider as close to the ideal as those floors allow.
+--
+-- When the floors add up to more than the region -- say two gallery panes in
+-- half a screen -- the pair is kept side by side at those widths and allowed
+-- to spill out of the region, centred on it but held inside the screen.
+-- Stacking one pane on top of the other would leave one of them unusable.
+-- Only when even the whole screen is too narrow do they overlap, pinned to its
+-- edges.
+on placeSideBySide(leadingWindow, trailingWindow, regionRect, leadingWidth, screenRect)
+	set {regionLeft, regionTop, regionWidth, regionHeight} to regionRect
+	set {screenLeft, screenTop, screenWidth, screenHeight} to screenRect
+	set idealLeading to leadingWidth
+	set leadingFloor to 0
+	set trailingFloor to 0
+	repeat 4 times
+		set trailingWidth to regionWidth - leadingWidth
+		set leadingGot to item 3 of my placeWindow(leadingWindow, {regionLeft, regionTop, leadingWidth, regionHeight})
+		set trailingGot to item 3 of my placeWindow(trailingWindow, {regionLeft + leadingWidth, regionTop, trailingWidth, regionHeight})
+		if leadingGot &gt; leadingWidth + 1 then set leadingFloor to leadingGot
+		if trailingGot &gt; trailingWidth + 1 then set trailingFloor to trailingGot
+		if leadingGot ≤ leadingWidth + 1 and trailingGot ≤ trailingWidth + 1 then return
+		if leadingFloor + trailingFloor &gt; regionWidth then exit repeat
+		set leadingWidth to idealLeading
+		if leadingWidth &lt; leadingFloor then set leadingWidth to leadingFloor
+		if leadingWidth &gt; regionWidth - trailingFloor then set leadingWidth to regionWidth - trailingFloor
+	end repeat
+	-- The region cannot hold both panes.
+	set leadingWidth to leadingGot
+	set trailingWidth to trailingGot
+	if leadingFloor &gt; leadingWidth then set leadingWidth to leadingFloor
+	if trailingFloor &gt; trailingWidth then set trailingWidth to trailingFloor
+	set pairWidth to leadingWidth + trailingWidth
+	if pairWidth ≤ screenWidth then
+		set pairLeft to regionLeft + (regionWidth - pairWidth) / 2
+		if pairLeft + pairWidth &gt; screenLeft + screenWidth then set pairLeft to screenLeft + screenWidth - pairWidth
+		if pairLeft &lt; screenLeft then set pairLeft to screenLeft
+		my placeWindow(leadingWindow, {pairLeft, regionTop, leadingWidth, regionHeight})
+		my placeWindow(trailingWindow, {pairLeft + leadingWidth, regionTop, trailingWidth, regionHeight})
+	else
+		my placeWindow(leadingWindow, {screenLeft, regionTop, leadingWidth, regionHeight})
+		my placeWindow(trailingWindow, {screenLeft + screenWidth - trailingWidth, regionTop, trailingWidth, regionHeight})
+	end if
+end placeSideBySide
+
+-- Pull a window back inside the screen area it was laid out on, when Finder
+-- made it wider or taller than the space it was given. Only ever moves the
+-- window, never resizes it: Finder has already said it will not go smaller.
+on keepOnScreen(theWindow, screenRect)
+	set {screenLeft, screenTop, screenWidth, screenHeight} to screenRect
+	tell application "Finder" to set {boundsLeft, boundsTop, boundsRight, boundsBottom} to bounds of theWindow
+	set shiftX to 0
+	set shiftY to 0
+	if boundsRight &gt; screenLeft + screenWidth then set shiftX to (screenLeft + screenWidth) - boundsRight
+	if boundsLeft + shiftX &lt; screenLeft then set shiftX to screenLeft - boundsLeft
+	if boundsBottom &gt; screenTop + screenHeight then set shiftY to (screenTop + screenHeight) - boundsBottom
+	if boundsTop + shiftY &lt; screenTop then set shiftY to screenTop - boundsTop
+	if shiftX is 0 and shiftY is 0 then return
+	tell application "Finder" to set bounds of theWindow to {round (boundsLeft + shiftX), round (boundsTop + shiftY), round (boundsRight + shiftX), round (boundsBottom + shiftY)}
+end keepOnScreen
 -- Collapse every open Finder window and tab into one window carrying one tab per
 -- distinct folder.
 --
@@ -1958,21 +2069,20 @@ on pauseFor(keyName, fallbackValue)
 end pauseFor
 -- Hide every application other than Finder, when the workflow is configured to.
 --
--- There is no scriptable "hide others" command, and the menu item title is
--- localised and not carried in AppKit's MenuCommands table, so this goes through
--- the keyboard shortcut. (The previous version wrapped an entirely commented-out
--- `click menu item` in a `try` and put the keystroke in the `on error` branch --
--- the empty `try` never raised, so the keystroke never ran and the setting did
--- nothing at all.)
+-- This sets each visible application's `visible` to false through System
+-- Events instead of pressing Option-Command-H. A keystroke goes to whichever
+-- application is frontmost at that instant, so when Finder has not come to the
+-- front yet it hides the wrong set of applications -- or, sent to an app that
+-- binds the shortcut to something else, does something else entirely. Setting
+-- `visible` does not depend on focus.
 
 on hideOtherApplications()
 	if not my envFlag("hide_others") then return
-	tell application "System Events" to launch application "System Events"
-	my pauseFor("delay_system_events_launch", 0.2)
-	tell application "System Events"
-		tell process "Finder" to set frontmost to true
-		keystroke "h" using {option down, command down}
-	end tell
+	try
+		tell application "System Events"
+			set visible of (every process whose visible is true and background only is false and bundle identifier is not "com.apple.finder") to false
+		end tell
+	end try
 	my pauseFor("delay_window_operation", 0.2)
 end hideOtherApplications</string>
 				<key>scriptargtype</key>
@@ -2178,35 +2288,6 @@ end hideOtherApplications</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alignment</key>
-				<integer>2</integer>
-				<key>backgroundcolor</key>
-				<string>#5E5E5EBF</string>
-				<key>fadespeed</key>
-				<integer>0</integer>
-				<key>fillmode</key>
-				<integer>0</integer>
-				<key>font</key>
-				<string>Tahoma</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>largetypetext</key>
-				<string>🧹unclutter → {var:mode} → {var:single_pane_window_position}</string>
-				<key>textcolor</key>
-				<string></string>
-				<key>wrapat</key>
-				<integer>50</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.largetype</string>
-			<key>uid</key>
-			<string>D4731FD4-CAC0-48A1-99F7-07F235D13ACE</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -2232,38 +2313,6 @@ end hideOtherApplications</string>
 			<string>alfred.workflow.input.listfilter</string>
 			<key>uid</key>
 			<string>D786CBC8-E75A-42DA-845D-A74401D86DD6</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:wait_message}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>5</integer>
-						<key>matchstring</key>
-						<string></string>
-						<key>outputlabel</key>
-						<string>Show "please wait"</string>
-						<key>uid</key>
-						<string>33F43024-D5B4-4EDB-8901-298BE16F6854</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>else</string>
-				<key>hideelse</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>9C68A7A5-D136-42B3-AB7C-398A8139641D</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2415,47 +2464,16 @@ end hideOtherApplications</string>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>use scripting additions
+				<string>-- Show the desktop through Mission Control itself rather than by pressing the
+-- key assigned to it. The old way sent key code 103 (F11), which does nothing
+-- once "Show Desktop" is unassigned or disabled in System Settings &gt; Keyboard &gt;
+-- Keyboard Shortcuts -- and nothing reported that it had done nothing.
+-- Launching Mission Control with the argument 1 shows the desktop regardless of
+-- that setting, and running it again brings the windows back, just as the key
+-- does. It has to go through `open`: executing the binary inside the app bundle
+-- directly is killed by macOS's launch constraints (exit 137).
 
-on run argv
-	tell application "System Events" to launch application "System Events"
-	my pauseFor("delay_system_events_launch", 0.2)
-	tell application "System Events" to key code (my envNumber("show_desktop_keycode", 103))
-	my pauseFor("delay_window_operation", 0.2)
-end run
-
--- Alfred exposes workflow variables as environment variables. `system attribute`
--- yields "" for anything unset, and "" as number raises, so every read goes
--- through these helpers with an explicit fallback.
-
-on envText(keyName, fallbackValue)
-	try
-		set rawValue to system attribute keyName
-		if rawValue is missing value then return fallbackValue
-		if rawValue is "" then return fallbackValue
-		return rawValue
-	on error
-		return fallbackValue
-	end try
-end envText
-
-on envNumber(keyName, fallbackValue)
-	try
-		return (my envText(keyName, "")) as number
-	on error
-		return fallbackValue
-	end try
-end envNumber
-
-on envFlag(keyName)
-	set rawValue to my envText(keyName, "0")
-	return rawValue is "1" or rawValue is "true"
-end envFlag
-
-on pauseFor(keyName, fallbackValue)
-	set waitSeconds to my envNumber(keyName, fallbackValue)
-	if waitSeconds &gt; 0 then delay waitSeconds
-end pauseFor</string>
+do shell script "/usr/bin/open -b com.apple.exposelauncher --args 1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -2539,67 +2557,6 @@ end pauseFor</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alignment</key>
-				<integer>2</integer>
-				<key>backgroundcolor</key>
-				<string>#5E5E5EBF</string>
-				<key>fadespeed</key>
-				<integer>0</integer>
-				<key>fillmode</key>
-				<integer>0</integer>
-				<key>font</key>
-				<string>Tahoma</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>largetypetext</key>
-				<string>🧹unclutter → {var:mode} → {var:dual_pane_window_position} ({var:orientation})</string>
-				<key>textcolor</key>
-				<string></string>
-				<key>wrapat</key>
-				<integer>50</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.largetype</string>
-			<key>uid</key>
-			<string>2434B5D1-F72E-414C-A54E-C6AABCF098BB</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:wait_message}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>5</integer>
-						<key>matchstring</key>
-						<string></string>
-						<key>outputlabel</key>
-						<string>Show "please wait"</string>
-						<key>uid</key>
-						<string>33F43024-D5B4-4EDB-8901-298BE16F6854</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>else</string>
-				<key>hideelse</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>4DB44DA2-58F0-46E2-920E-71B0BCDAD222</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -2624,7 +2581,8 @@ on run argv
 	set primaryView to my envText("view_type_primary", "list")
 	set secondaryView to my envText("view_type_secondary", "list")
 
-	set {regionLeft, regionTop, regionWidth, regionHeight} to my regionForPosition(positionName, my activeUsableRect())
+	set screenRect to my activeUsableRect()
+	set {regionLeft, regionTop, regionWidth, regionHeight} to my regionForPosition(positionName, screenRect)
 
 	-- Finder will not shrink a window below its sidebar plus ~324pt of content
 	-- (measured: a window asked for 100pt came back 316pt; with a 192pt
@@ -2699,9 +2657,11 @@ on run argv
 	if sidesReversed then
 		set {primaryRect, secondaryRect} to {trailingRect, leadingRect}
 		set {primarySidebar, secondarySidebar} to {trailingSidebar, leadingSidebar}
+		set {leadingWindow, trailingWindow} to {secondaryWindow, primaryWindow}
 	else
 		set {primaryRect, secondaryRect} to {leadingRect, trailingRect}
 		set {primarySidebar, secondarySidebar} to {leadingSidebar, trailingSidebar}
+		set {leadingWindow, trailingWindow} to {primaryWindow, secondaryWindow}
 	end if
 
 	-- Chrome before geometry. Finder refuses to make a window narrower than its
@@ -2713,11 +2673,20 @@ on run argv
 	my applyChrome(primaryWindow, primaryView, primarySidebar)
 	my pauseFor("wait_in_seconds", 0.1)
 
-	tell application "Finder"
-		set bounds of secondaryWindow to my boundsOfRect(secondaryRect)
-		set bounds of primaryWindow to my boundsOfRect(primaryRect)
-		activate
-	end tell
+	-- The widths above are what the layout asks for, not necessarily what
+	-- Finder grants: a pane showing the preview pane (gallery view shows it by
+	-- default) has a much higher floor, and that floor depends on how wide the
+	-- user has dragged the preview. placeSideBySide reads back what Finder
+	-- actually did and moves the divider accordingly.
+	if orientationName is "vertical" then
+		my placeWindow(secondaryWindow, secondaryRect)
+		my placeWindow(primaryWindow, primaryRect)
+	else
+		my placeSideBySide(leadingWindow, trailingWindow, {regionLeft, regionTop, regionWidth, regionHeight}, item 3 of leadingRect, screenRect)
+	end if
+	my keepOnScreen(secondaryWindow, screenRect)
+	my keepOnScreen(primaryWindow, screenRect)
+	tell application "Finder" to activate
 end run
 
 -- Alfred exposes workflow variables as environment variables. `system attribute`
@@ -2928,7 +2897,86 @@ on applyChrome(theWindow, viewName, sidebarPixels)
 			set sidebar width of theWindow to sidebarPixels
 		end try
 	end tell
-end applyChrome</string>
+end applyChrome
+
+-- Set a window's bounds and return what Finder actually made of them, as
+-- {left, top, width, height}. Finder silently widens a window it considers too
+-- narrow, and the floor is not a constant: it is ~316pt plus the sidebar plus,
+-- when the preview pane is showing, the preview pane's width -- which the user
+-- can drag, and which Finder remembers per folder, so it cannot be known in
+-- advance. Gallery view shows the preview by default. So ask Finder rather
+-- than predict it. The clamped bounds read back immediately; no delay is needed.
+on placeWindow(theWindow, aRect)
+	tell application "Finder"
+		set bounds of theWindow to my boundsOfRect(aRect)
+		set actualBounds to bounds of theWindow
+	end tell
+	set {boundsLeft, boundsTop, boundsRight, boundsBottom} to actualBounds
+	return {boundsLeft, boundsTop, boundsRight - boundsLeft, boundsBottom - boundsTop}
+end placeWindow
+
+-- Two panes side by side in the region {left, top, width, height}, the divider
+-- ideally at leadingWidth. Each pass records the smallest width Finder has
+-- shown it will accept for a pane (the width it widened that pane to), then
+-- puts the divider as close to the ideal as those floors allow.
+--
+-- When the floors add up to more than the region -- say two gallery panes in
+-- half a screen -- the pair is kept side by side at those widths and allowed
+-- to spill out of the region, centred on it but held inside the screen.
+-- Stacking one pane on top of the other would leave one of them unusable.
+-- Only when even the whole screen is too narrow do they overlap, pinned to its
+-- edges.
+on placeSideBySide(leadingWindow, trailingWindow, regionRect, leadingWidth, screenRect)
+	set {regionLeft, regionTop, regionWidth, regionHeight} to regionRect
+	set {screenLeft, screenTop, screenWidth, screenHeight} to screenRect
+	set idealLeading to leadingWidth
+	set leadingFloor to 0
+	set trailingFloor to 0
+	repeat 4 times
+		set trailingWidth to regionWidth - leadingWidth
+		set leadingGot to item 3 of my placeWindow(leadingWindow, {regionLeft, regionTop, leadingWidth, regionHeight})
+		set trailingGot to item 3 of my placeWindow(trailingWindow, {regionLeft + leadingWidth, regionTop, trailingWidth, regionHeight})
+		if leadingGot &gt; leadingWidth + 1 then set leadingFloor to leadingGot
+		if trailingGot &gt; trailingWidth + 1 then set trailingFloor to trailingGot
+		if leadingGot ≤ leadingWidth + 1 and trailingGot ≤ trailingWidth + 1 then return
+		if leadingFloor + trailingFloor &gt; regionWidth then exit repeat
+		set leadingWidth to idealLeading
+		if leadingWidth &lt; leadingFloor then set leadingWidth to leadingFloor
+		if leadingWidth &gt; regionWidth - trailingFloor then set leadingWidth to regionWidth - trailingFloor
+	end repeat
+	-- The region cannot hold both panes.
+	set leadingWidth to leadingGot
+	set trailingWidth to trailingGot
+	if leadingFloor &gt; leadingWidth then set leadingWidth to leadingFloor
+	if trailingFloor &gt; trailingWidth then set trailingWidth to trailingFloor
+	set pairWidth to leadingWidth + trailingWidth
+	if pairWidth ≤ screenWidth then
+		set pairLeft to regionLeft + (regionWidth - pairWidth) / 2
+		if pairLeft + pairWidth &gt; screenLeft + screenWidth then set pairLeft to screenLeft + screenWidth - pairWidth
+		if pairLeft &lt; screenLeft then set pairLeft to screenLeft
+		my placeWindow(leadingWindow, {pairLeft, regionTop, leadingWidth, regionHeight})
+		my placeWindow(trailingWindow, {pairLeft + leadingWidth, regionTop, trailingWidth, regionHeight})
+	else
+		my placeWindow(leadingWindow, {screenLeft, regionTop, leadingWidth, regionHeight})
+		my placeWindow(trailingWindow, {screenLeft + screenWidth - trailingWidth, regionTop, trailingWidth, regionHeight})
+	end if
+end placeSideBySide
+
+-- Pull a window back inside the screen area it was laid out on, when Finder
+-- made it wider or taller than the space it was given. Only ever moves the
+-- window, never resizes it: Finder has already said it will not go smaller.
+on keepOnScreen(theWindow, screenRect)
+	set {screenLeft, screenTop, screenWidth, screenHeight} to screenRect
+	tell application "Finder" to set {boundsLeft, boundsTop, boundsRight, boundsBottom} to bounds of theWindow
+	set shiftX to 0
+	set shiftY to 0
+	if boundsRight &gt; screenLeft + screenWidth then set shiftX to (screenLeft + screenWidth) - boundsRight
+	if boundsLeft + shiftX &lt; screenLeft then set shiftX to screenLeft - boundsLeft
+	if boundsBottom &gt; screenTop + screenHeight then set shiftY to (screenTop + screenHeight) - boundsBottom
+	if boundsTop + shiftY &lt; screenTop then set shiftY to screenTop - boundsTop
+	if shiftX is 0 and shiftY is 0 then return
+	tell application "Finder" to set bounds of theWindow to {round (boundsLeft + shiftX), round (boundsTop + shiftY), round (boundsRight + shiftX), round (boundsBottom + shiftY)}
+end keepOnScreen</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3146,6 +3194,85 @@ on applyChrome(theWindow, viewName, sidebarPixels)
 		end try
 	end tell
 end applyChrome
+
+-- Set a window's bounds and return what Finder actually made of them, as
+-- {left, top, width, height}. Finder silently widens a window it considers too
+-- narrow, and the floor is not a constant: it is ~316pt plus the sidebar plus,
+-- when the preview pane is showing, the preview pane's width -- which the user
+-- can drag, and which Finder remembers per folder, so it cannot be known in
+-- advance. Gallery view shows the preview by default. So ask Finder rather
+-- than predict it. The clamped bounds read back immediately; no delay is needed.
+on placeWindow(theWindow, aRect)
+	tell application "Finder"
+		set bounds of theWindow to my boundsOfRect(aRect)
+		set actualBounds to bounds of theWindow
+	end tell
+	set {boundsLeft, boundsTop, boundsRight, boundsBottom} to actualBounds
+	return {boundsLeft, boundsTop, boundsRight - boundsLeft, boundsBottom - boundsTop}
+end placeWindow
+
+-- Two panes side by side in the region {left, top, width, height}, the divider
+-- ideally at leadingWidth. Each pass records the smallest width Finder has
+-- shown it will accept for a pane (the width it widened that pane to), then
+-- puts the divider as close to the ideal as those floors allow.
+--
+-- When the floors add up to more than the region -- say two gallery panes in
+-- half a screen -- the pair is kept side by side at those widths and allowed
+-- to spill out of the region, centred on it but held inside the screen.
+-- Stacking one pane on top of the other would leave one of them unusable.
+-- Only when even the whole screen is too narrow do they overlap, pinned to its
+-- edges.
+on placeSideBySide(leadingWindow, trailingWindow, regionRect, leadingWidth, screenRect)
+	set {regionLeft, regionTop, regionWidth, regionHeight} to regionRect
+	set {screenLeft, screenTop, screenWidth, screenHeight} to screenRect
+	set idealLeading to leadingWidth
+	set leadingFloor to 0
+	set trailingFloor to 0
+	repeat 4 times
+		set trailingWidth to regionWidth - leadingWidth
+		set leadingGot to item 3 of my placeWindow(leadingWindow, {regionLeft, regionTop, leadingWidth, regionHeight})
+		set trailingGot to item 3 of my placeWindow(trailingWindow, {regionLeft + leadingWidth, regionTop, trailingWidth, regionHeight})
+		if leadingGot &gt; leadingWidth + 1 then set leadingFloor to leadingGot
+		if trailingGot &gt; trailingWidth + 1 then set trailingFloor to trailingGot
+		if leadingGot ≤ leadingWidth + 1 and trailingGot ≤ trailingWidth + 1 then return
+		if leadingFloor + trailingFloor &gt; regionWidth then exit repeat
+		set leadingWidth to idealLeading
+		if leadingWidth &lt; leadingFloor then set leadingWidth to leadingFloor
+		if leadingWidth &gt; regionWidth - trailingFloor then set leadingWidth to regionWidth - trailingFloor
+	end repeat
+	-- The region cannot hold both panes.
+	set leadingWidth to leadingGot
+	set trailingWidth to trailingGot
+	if leadingFloor &gt; leadingWidth then set leadingWidth to leadingFloor
+	if trailingFloor &gt; trailingWidth then set trailingWidth to trailingFloor
+	set pairWidth to leadingWidth + trailingWidth
+	if pairWidth ≤ screenWidth then
+		set pairLeft to regionLeft + (regionWidth - pairWidth) / 2
+		if pairLeft + pairWidth &gt; screenLeft + screenWidth then set pairLeft to screenLeft + screenWidth - pairWidth
+		if pairLeft &lt; screenLeft then set pairLeft to screenLeft
+		my placeWindow(leadingWindow, {pairLeft, regionTop, leadingWidth, regionHeight})
+		my placeWindow(trailingWindow, {pairLeft + leadingWidth, regionTop, trailingWidth, regionHeight})
+	else
+		my placeWindow(leadingWindow, {screenLeft, regionTop, leadingWidth, regionHeight})
+		my placeWindow(trailingWindow, {screenLeft + screenWidth - trailingWidth, regionTop, trailingWidth, regionHeight})
+	end if
+end placeSideBySide
+
+-- Pull a window back inside the screen area it was laid out on, when Finder
+-- made it wider or taller than the space it was given. Only ever moves the
+-- window, never resizes it: Finder has already said it will not go smaller.
+on keepOnScreen(theWindow, screenRect)
+	set {screenLeft, screenTop, screenWidth, screenHeight} to screenRect
+	tell application "Finder" to set {boundsLeft, boundsTop, boundsRight, boundsBottom} to bounds of theWindow
+	set shiftX to 0
+	set shiftY to 0
+	if boundsRight &gt; screenLeft + screenWidth then set shiftX to (screenLeft + screenWidth) - boundsRight
+	if boundsLeft + shiftX &lt; screenLeft then set shiftX to screenLeft - boundsLeft
+	if boundsBottom &gt; screenTop + screenHeight then set shiftY to (screenTop + screenHeight) - boundsBottom
+	if boundsTop + shiftY &lt; screenTop then set shiftY to screenTop - boundsTop
+	if shiftX is 0 and shiftY is 0 then return
+	tell application "Finder" to set bounds of theWindow to {round (boundsLeft + shiftX), round (boundsTop + shiftY), round (boundsRight + shiftX), round (boundsBottom + shiftY)}
+end keepOnScreen
 -- Collapse every open Finder window and tab into one window carrying one tab per
 -- distinct folder.
 --
@@ -3519,21 +3646,20 @@ on pauseFor(keyName, fallbackValue)
 end pauseFor
 -- Hide every application other than Finder, when the workflow is configured to.
 --
--- There is no scriptable "hide others" command, and the menu item title is
--- localised and not carried in AppKit's MenuCommands table, so this goes through
--- the keyboard shortcut. (The previous version wrapped an entirely commented-out
--- `click menu item` in a `try` and put the keystroke in the `on error` branch --
--- the empty `try` never raised, so the keystroke never ran and the setting did
--- nothing at all.)
+-- This sets each visible application's `visible` to false through System
+-- Events instead of pressing Option-Command-H. A keystroke goes to whichever
+-- application is frontmost at that instant, so when Finder has not come to the
+-- front yet it hides the wrong set of applications -- or, sent to an app that
+-- binds the shortcut to something else, does something else entirely. Setting
+-- `visible` does not depend on focus.
 
 on hideOtherApplications()
 	if not my envFlag("hide_others") then return
-	tell application "System Events" to launch application "System Events"
-	my pauseFor("delay_system_events_launch", 0.2)
-	tell application "System Events"
-		tell process "Finder" to set frontmost to true
-		keystroke "h" using {option down, command down}
-	end tell
+	try
+		tell application "System Events"
+			set visible of (every process whose visible is true and background only is false and bundle identifier is not "com.apple.finder") to false
+		end tell
+	end try
 	my pauseFor("delay_window_operation", 0.2)
 end hideOtherApplications</string>
 				<key>scriptargtype</key>
@@ -4026,13 +4152,6 @@ Requires Accessibility and Automation permissions for Alfred (System Settings &g
 			<key>ypos</key>
 			<real>270</real>
 		</dict>
-		<key>2434B5D1-F72E-414C-A54E-C6AABCF098BB</key>
-		<dict>
-			<key>xpos</key>
-			<real>3400</real>
-			<key>ypos</key>
-			<real>620</real>
-		</dict>
 		<key>29057A8E-1F86-4F14-A164-450EC5F15461</key>
 		<dict>
 			<key>colorindex</key>
@@ -4057,13 +4176,6 @@ Requires Accessibility and Automation permissions for Alfred (System Settings &g
 			<real>2375</real>
 			<key>ypos</key>
 			<real>475</real>
-		</dict>
-		<key>4DB44DA2-58F0-46E2-920E-71B0BCDAD222</key>
-		<dict>
-			<key>xpos</key>
-			<real>3290</real>
-			<key>ypos</key>
-			<real>650</real>
 		</dict>
 		<key>52F99AAF-EBFA-4B71-AFA8-24BB9B4C01BA</key>
 		<dict>
@@ -4254,13 +4366,6 @@ Requires Accessibility and Automation permissions for Alfred (System Settings &g
 			<key>ypos</key>
 			<real>365</real>
 		</dict>
-		<key>9C68A7A5-D136-42B3-AB7C-398A8139641D</key>
-		<dict>
-			<key>xpos</key>
-			<real>3290</real>
-			<key>ypos</key>
-			<real>545</real>
-		</dict>
 		<key>AD791D09-B3A5-48E1-BEFF-0435E9EEAB3A</key>
 		<dict>
 			<key>xpos</key>
@@ -4328,13 +4433,6 @@ Requires Accessibility and Automation permissions for Alfred (System Settings &g
 			<real>2520</real>
 			<key>ypos</key>
 			<real>160</real>
-		</dict>
-		<key>D4731FD4-CAC0-48A1-99F7-07F235D13ACE</key>
-		<dict>
-			<key>xpos</key>
-			<real>3400</real>
-			<key>ypos</key>
-			<real>515</real>
 		</dict>
 		<key>D786CBC8-E75A-42DA-845D-A74401D86DD6</key>
 		<dict>
@@ -4544,25 +4642,6 @@ Requires Accessibility and Automation permissions for Alfred (System Settings &g
 				<string></string>
 			</dict>
 			<key>description</key>
-			<string>If checked, a "please wait" overlay is shown while the single/dual pane is being arranged (default = unchecked).</string>
-			<key>label</key>
-			<string>Wait message</string>
-			<key>type</key>
-			<string>checkbox</string>
-			<key>variable</key>
-			<string>wait_message</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>default</key>
-				<false/>
-				<key>required</key>
-				<false/>
-				<key>text</key>
-				<string></string>
-			</dict>
-			<key>description</key>
 			<string>If checked, other apps will be hidden while the single/dual Finder pane gets displayed (default = unchecked).</string>
 			<key>label</key>
 			<string>Hide other apps</string>
@@ -4722,15 +4801,13 @@ Requires Accessibility and Automation permissions for Alfred (System Settings &g
 		<string>0.2</string>
 		<key>delay_window_operation</key>
 		<string>0.2</string>
-		<key>show_desktop_keycode</key>
-		<string>103</string>
 		<key>wait_in_seconds</key>
 		<string>0.1</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>2.0</string>
+	<string>2.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/finder-unclutter</string>
 </dict>

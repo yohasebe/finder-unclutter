@@ -24,10 +24,17 @@ This workflow has been developed and tested on macOS Sonoma and macOS 26 Tahoe. 
 
 ## Installation
 
-To install, download [Finder Unclutter Alfred Workflow](https://github.com/yohasebe/finder-unclutter/raw/main/finder-unclutter.alfredworkflow) (version 2.0)
+To install, download [Finder Unclutter Alfred Workflow](https://github.com/yohasebe/finder-unclutter/raw/main/finder-unclutter.alfredworkflow) (version 2.1)
 
 ## Change Log
 
+- 2.1 (2026-09-24)
+  - Tested on macOS 27, including a layout on an external display.
+  - Fixed: a pane showing Finder's preview pane could run off the edge of the screen. Gallery view shows the preview by default, and the preview makes a window wider than the layout asked for. The layout now reads back the width Finder actually gives each pane and moves the divider to fit; when the two panes cannot share the area at all, they stay side by side on screen instead of overlapping.
+  - Fixed: Show Desktop did nothing when the "Show Desktop" keyboard shortcut was turned off or reassigned in System Settings. It now asks Mission Control directly, so the shortcut setting no longer matters. The `show_desktop_keycode` variable has been removed.
+  - "Hide other apps" now hides the other apps directly instead of pressing Option-Command-H, which could reach the wrong app if Finder was not yet in front.
+  - The "please wait" overlay and its setting have been removed; the layout no longer takes long enough to need it.
+  - The workflow file no longer carries 32 icon images that nothing in the workflow used.
 - 2.0 (2026-08-09)
   - **Finder no longer has to be set to English.** Tabs are now built with Finder's own New Tab shortcut instead of the localised "Merge All Windows" menu item, so merging works in any language. The language-switching prompt and the `defaults write com.apple.Finder AppleLanguages` step have been removed.
   - **Windows are laid out on the display they are already on**, instead of always on the primary display.
@@ -103,7 +110,7 @@ This will close all the Finder tabs and windows including the current one. A con
 
 #### <img src="./icons/show-desktop.png" width=32> Show Desktop
 
-Show Desktop using Mission Control's "Show Desktop" feature. Use the `show_desktop_keycode` environment variable if you want to change the default key code (`103`).
+Show Desktop using Mission Control's "Show Desktop" feature. Run it again to bring the windows back. It works whether or not the "Show Desktop" keyboard shortcut is enabled in System Settings.
 
 #### <img src="./icons/mini-finder-unclutter.png" width=32> Open Config
 
@@ -138,10 +145,6 @@ The finder view type used on the secondary pane (`list`, `icon`, `column`, or `g
 
 The contents presented on the secondary pane (`same as primary`, `home`, `parent`,  `desktop`, default = `parent`)
 
-#### Wait message
-
-If checked, an "uncluttering" overlay is shown while the single/dual pane is being arranged (default = `unchecked`). Since version 2.0 the layout is fast enough that the overlay is mostly a flash on screen.
-
 #### Hide other apps
 
 If checked, other apps will be hidden while the single/dual Finder pane gets displayed (default = `unchecked`).
@@ -152,7 +155,6 @@ Reverse the contents of the primary (left/top) and secondary (right/bottom) pane
 
 ## Environment Variables
 
-- `show_desktop_keycode`: The keycode of the key assigned to Mission Control's "Show Desktop" (default = `103`).
 - `wait_in_seconds`: Delay between steps when arranging the dual-pane layout (default = `0.1`). Increase if network drives or external volumes don't load in time.
 - `delay_system_events_launch`: Delay after launching System Events before GUI operations (default = `0.2`). Increase if the New Tab shortcut is sometimes missed.
 - `delay_window_operation`: Delay after window open/close operations (default = `0.2`).

@@ -11,7 +11,8 @@ on run argv
 
 	-- Read the screen before opening anything, so an existing window's display
 	-- decides the layout rather than wherever Finder drops a brand new window.
-	set targetRect to my regionForPosition(positionName, my activeUsableRect())
+	set screenRect to my activeUsableRect()
+	set targetRect to my regionForPosition(positionName, screenRect)
 
 	tell application "Finder"
 		activate
@@ -30,7 +31,11 @@ on run argv
 	-- Chrome first: Finder will not shrink a window below its sidebar plus a
 	-- minimum content area, so the sidebar has to be settled before the bounds.
 	my applyChrome(theWindow, viewName, sidebarPixels)
-	tell application "Finder" to set bounds of theWindow to my boundsOfRect(targetRect)
+	-- Finder may make the window wider than the region (the preview pane raises
+	-- its minimum width); if so, keep it on the screen rather than let it hang
+	-- off the edge.
+	my placeWindow(theWindow, targetRect)
+	my keepOnScreen(theWindow, screenRect)
 end run
 
 --#include lib/env.applescript

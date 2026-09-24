@@ -17,7 +17,8 @@ on run argv
 	set primaryView to my envText("view_type_primary", "list")
 	set secondaryView to my envText("view_type_secondary", "list")
 
-	set {regionLeft, regionTop, regionWidth, regionHeight} to my regionForPosition(positionName, my activeUsableRect())
+	set screenRect to my activeUsableRect()
+	set {regionLeft, regionTop, regionWidth, regionHeight} to my regionForPosition(positionName, screenRect)
 
 	-- Finder will not shrink a window below its sidebar plus ~324pt of content
 	-- (measured: a window asked for 100pt came back 316pt; with a 192pt
@@ -92,9 +93,11 @@ on run argv
 	if sidesReversed then
 		set {primaryRect, secondaryRect} to {trailingRect, leadingRect}
 		set {primarySidebar, secondarySidebar} to {trailingSidebar, leadingSidebar}
+		set {leadingWindow, trailingWindow} to {secondaryWindow, primaryWindow}
 	else
 		set {primaryRect, secondaryRect} to {leadingRect, trailingRect}
 		set {primarySidebar, secondarySidebar} to {leadingSidebar, trailingSidebar}
+		set {leadingWindow, trailingWindow} to {primaryWindow, secondaryWindow}
 	end if
 
 	-- Chrome before geometry. Finder refuses to make a window narrower than its
@@ -106,11 +109,20 @@ on run argv
 	my applyChrome(primaryWindow, primaryView, primarySidebar)
 	my pauseFor("wait_in_seconds", 0.1)
 
-	tell application "Finder"
-		set bounds of secondaryWindow to my boundsOfRect(secondaryRect)
-		set bounds of primaryWindow to my boundsOfRect(primaryRect)
-		activate
-	end tell
+	-- The widths above are what the layout asks for, not necessarily what
+	-- Finder grants: a pane showing the preview pane (gallery view shows it by
+	-- default) has a much higher floor, and that floor depends on how wide the
+	-- user has dragged the preview. placeSideBySide reads back what Finder
+	-- actually did and moves the divider accordingly.
+	if orientationName is "vertical" then
+		my placeWindow(secondaryWindow, secondaryRect)
+		my placeWindow(primaryWindow, primaryRect)
+	else
+		my placeSideBySide(leadingWindow, trailingWindow, {regionLeft, regionTop, regionWidth, regionHeight}, item 3 of leadingRect, screenRect)
+	end if
+	my keepOnScreen(secondaryWindow, screenRect)
+	my keepOnScreen(primaryWindow, screenRect)
+	tell application "Finder" to activate
 end run
 
 --#include lib/env.applescript
