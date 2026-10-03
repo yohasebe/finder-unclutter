@@ -1,0 +1,40 @@
+# Paths this repository may track. check_tracked_paths.rb fails when a tracked
+# file matches no line here, and when a line here matches no tracked file (so
+# a stale line cannot quietly widen what is allowed).
+#
+# Lines are File.fnmatch globs with FNM_PATHNAME | FNM_DOTMATCH: `*` stays
+# within one directory and also matches dotfiles, `**/` spans any depth.
+# `{a,b}` is expanded by the checker before matching, and every alternative
+# must match a tracked file.
+# Prefer a place and a file type over a single file; name a single file only
+# when it is the one file of its kind in that place.
+#
+# Adding a line is a decision about what may be published: this repository
+# is public, and the .alfredworkflow people download is committed to it.
+
+# --- Repository root --------------------------------------------------------
+.gitignore
+LICENSE
+README.md
+version.txt
+finder-unclutter.alfredworkflow
+
+# --- The workflow (source/) -------------------------------------------------
+# The files Alfred loads, and the AppleScript sources build.py injects into
+# info.plist. tools/pack_workflow.rb decides which of them go into the bundle.
+source/info.plist
+source/{icon.png,finder-unclutter@2x.png}
+source/List Filter Images/*.png
+source/scripts/*.applescript
+source/scripts/lib/*.applescript
+
+# --- Icon sources, and the images README.md shows ---------------------------
+icons/*.{png,svg}
+images/*.{png,gif}
+
+# --- Repository tooling -----------------------------------------------------
+.github/workflows/*.yml
+tools/*.{py,rb}
+tools/manifest.json
+tools/tracked_paths.allow
+tools/hooks/{pre-commit,pre-push}
